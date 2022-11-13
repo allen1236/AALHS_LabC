@@ -1,0 +1,54 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'cordiccart2pol'" level="0">
+<item name = "Date">Sun Nov 13 22:40:36 2022
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
+<item name = "Project">CORDIC_original</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.35 ns, 3.903 ns, 1.44 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">42, 42, 0.225 us, 0.225 us, 18, 18, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ln99_Block_entry39_proc9_fu_82">Block_entry39_proc9, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_ini_trans_fu_94">ini_trans, 11, 11, 58.850 ns, 58.850 ns, 11, 11, no</column>
+<column name="grp_cordic_cr_unsigned_short_1_s_fu_104">cordic_cr_unsigned_short_1_s, 1, 1, 5.350 ns, 5.350 ns, 1, 1, no</column>
+<column name="grp_cordic_cr_unsigned_short_2_s_fu_111">cordic_cr_unsigned_short_2_s, 1, 1, 5.350 ns, 5.350 ns, 1, 1, no</column>
+<column name="grp_cordic_cr_unsigned_short_3_s_fu_118">cordic_cr_unsigned_short_3_s, 1, 1, 5.350 ns, 5.350 ns, 1, 1, no</column>
+<column name="grp_cordic_cr_unsigned_short_4_s_fu_125">cordic_cr_unsigned_short_4_s, 1, 1, 5.350 ns, 5.350 ns, 1, 1, no</column>
+<column name="grp_cordic_cr_unsigned_short_5_s_fu_132">cordic_cr_unsigned_short_5_s, 1, 1, 5.350 ns, 5.350 ns, 1, 1, no</column>
+<column name="grp_cordic_cr_unsigned_short_6_s_fu_139">cordic_cr_unsigned_short_6_s, 1, 1, 5.350 ns, 5.350 ns, 1, 1, no</column>
+<column name="grp_Block_entry3947_proc_fu_146">Block_entry3947_proc, 17, 17, 90.950 ns, 90.950 ns, 17, 17, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

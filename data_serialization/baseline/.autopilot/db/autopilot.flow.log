@@ -1,0 +1,1435 @@
+INFO-FLOW: Workspace D:/Documents/HLS/LabC/Big_Data_Ser/baseline opened at Sun Nov 13 20:46:53 +0800 2022
+Execute     ap_set_clock -name default -period 7.6 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7.6ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: E:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: E:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 1.88 sec.
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.007 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 2.026 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.16 sec.
+Execute   create_clock -period 7.6 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 7.6 -name default 
+Execute   source ./Big_Data_Ser/baseline/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./Big_Data_Ser/baseline/directives.tcl
+Execute     set_directive_top -name dut dut 
+INFO: [HLS 200-1510] Running: set_directive_top -name dut dut 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -hw_syn 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -pre_tcl 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 1.464 GB.
+INFO: [HLS 200-10] Analyzing design file 'Big_Data_Ser/top.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling Big_Data_Ser/top.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang Big_Data_Ser/top.cpp -foptimization-record-file=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot E:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp -hls-platform-db-name=E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.cpp.clang.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.cpp.clang.err.log 
+Command       ap_eval done; 0.202 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute       set_directive_top dut -name=dut 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp -hls-platform-db-name=E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/clang.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.574 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/.systemc_flag -fix-errors D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.489 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/all.directive.json -fix-errors D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.821 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.487 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.3 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.clang-tidy.loop-label.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 0.99 sec.
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 1.028 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 0.461 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.bc -hls-platform-db-name=E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.clang.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.588 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.791 seconds; current allocated memory: 1.464 GB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc -args  "D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.g.bc"  
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top.g.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.1.lower.bc -args D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.1.lower.bc > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.2.m1.bc -args D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.1.lower.bc -only-needed E:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc E:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.1.lower.bc -only-needed E:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc E:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.2.m1.bc > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 2.333 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.334 sec.
+Execute       run_link_or_opt -opt -out D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.3.fpc.bc -args D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dut -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dut -reflow-float-conversion -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.3.fpc.bc > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 0.907 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.909 sec.
+Execute       run_link_or_opt -out D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.4.m2.bc -args D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.3.fpc.bc -only-needed E:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.3.fpc.bc -only-needed E:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.4.m2.bc > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.5.gdce.bc -args D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dut 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dut -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.5.gdce.bc > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_compile -instruction_warning_threshold 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_array_partition -throughput_driven 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+Execute       get_clock_period -ns -default 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=dut -mllvm -hls-db-dir -mllvm D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.5.gdce.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.lto.bc -hls-platform-db-name=E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 0.323 sec.
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi3ELb0EEC2EDq3_j' into 'ap_int_base<3, false>::ap_int_base(int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::ap_int_base(int)' into 'ap_uint<3>::ap_uint(int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:333:58)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi4ELb0EEC2EDq4_j' into 'ap_int_base<4, false>::ap_int_base(int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<4, false>::ap_int_base(int)' into 'ap_uint<4>::ap_uint(int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:333:58)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi3ELb0EEC2EDq3_j' into 'ap_int_base<3, false>::ap_int_base(char)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:255:68)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::ap_int_base(char)' into 'ap_uint<3>::ap_uint(char)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:328:59)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<8, true>::ssdm_int(signed char)' into 'ap_int_base<8, true>::ap_int_base(char)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:255:68)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, true>::ap_int_base(char)' into 'bool operator==<4, false>(ap_int_base<4, false> const&, char)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1829:1854)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<4, false>::operator==<8, true>(ap_int_base<8, true> const&) const' into 'bool operator==<4, false>(ap_int_base<4, false> const&, char)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1829:1851)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_int_base<33, true>::ap_int_base<3, false>(ap_int_base<3, false> const&)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_int_base<33, true>::ap_int_base(int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<3, false>(ap_int_base<3, false> const&)' into 'ap_int_base<3, false>::RType<32, true>::plus operator+<3, false, 32, true>(ap_int_base<3, false> const&, ap_int_base<32, true> const&)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<3, false>::RType<32, true>::plus operator+<3, false, 32, true>(ap_int_base<3, false> const&, ap_int_base<32, true> const&)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:554)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base(int)' into 'ap_int_base<3, false>::RType<32, true>::plus operator+<3, false, 32, true>(ap_int_base<3, false> const&, ap_int_base<32, true> const&)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<3, false>::RType<32, true>::plus operator+<3, false, 32, true>(ap_int_base<3, false> const&, ap_int_base<32, true> const&)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<3, false>::RType<($_0)32, true>::plus operator+<3, false>(ap_int_base<3, false> const&, int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1679:1006)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::RType<32, true>::plus operator+<3, false, 32, true>(ap_int_base<3, false> const&, ap_int_base<32, true> const&)' into 'ap_int_base<3, false>::RType<($_0)32, true>::plus operator+<3, false>(ap_int_base<3, false> const&, int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1679:1004)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator==<4, false>(ap_int_base<4, false> const&, int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:1853)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<4, false>::operator==<32, true>(ap_int_base<32, true> const&) const' into 'bool operator==<4, false>(ap_int_base<4, false> const&, int)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:1850)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator>=<4, false>(int, ap_int_base<4, false> const&)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:897)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<32, true>::operator>=<4, false>(ap_int_base<4, false> const&) const' into 'bool operator>=<4, false>(int, ap_int_base<4, false> const&)' (E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:935)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::ap_uint(int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:36:28)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:118:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:117:38)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:116:38)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:115:22)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:114:22)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:113:22)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:112:22)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:111:49)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:111:24)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<3, false>::operator!=<3, false>(ap_int_base<3, false> const&) const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:109:22)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:107:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<4, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:107:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:105:39)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:104:23)
+INFO: [HLS 214-131] Inlining function 'bool operator>=<4, false>(int, ap_int_base<4, false> const&)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:103:12)
+INFO: [HLS 214-131] Inlining function 'bool operator==<4, false>(ap_int_base<4, false> const&, int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:99:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:96:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:94:38)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:93:22)
+INFO: [HLS 214-131] Inlining function 'bool operator==<4, false>(ap_int_base<4, false> const&, int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:89:26)
+INFO: [HLS 214-131] Inlining function 'bool operator==<4, false>(ap_int_base<4, false> const&, int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:89:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:87:27)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<4, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:86:28)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<4, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:85:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::ap_uint(char)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:82:18)
+INFO: [HLS 214-131] Inlining function 'ap_uint<4>::ap_uint(int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:80:21)
+INFO: [HLS 214-131] Inlining function 'ap_uint<4>::ap_uint(int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:79:21)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::ap_uint(char)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:71:28)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:67:43)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:66:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:64:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:63:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:62:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:61:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:60:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:59:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:58:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:57:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:56:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:55:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:55:38)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:54:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:54:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::operator long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:53:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::RType<($_0)32, true>::plus operator+<3, false>(ap_int_base<3, false> const&, int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:53:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:53:33)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::operator long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:49:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::RType<($_0)32, true>::plus operator+<3, false>(ap_int_base<3, false> const&, int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:49:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<3, false>::operator unsigned long long() const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:49:33)
+INFO: [HLS 214-131] Inlining function 'bool operator==<4, false>(ap_int_base<4, false> const&, char)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:47:30)
+INFO: [HLS 214-131] Inlining function 'bool operator==<4, false>(ap_int_base<4, false> const&, char)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:47:13)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<3, false>::operator==<3, false>(ap_int_base<3, false> const&) const' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:44:15)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::ap_uint(char)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:41:24)
+INFO: [HLS 214-131] Inlining function 'ap_uint<4>::ap_uint(int)' into 'dut(char*, int, char*)' (Big_Data_Ser/top.cpp:40:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_101_4' is marked as complete unroll implied by the pipeline pragma (Big_Data_Ser/top.cpp:101:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_91_3' is marked as complete unroll implied by the pipeline pragma (Big_Data_Ser/top.cpp:91:21)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_101_4' (Big_Data_Ser/top.cpp:101:22) in function 'dut' completely with a factor of 8 (Big_Data_Ser/top.cpp:21:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_91_3' (Big_Data_Ser/top.cpp:91:21) in function 'dut' completely with a factor of 8 (Big_Data_Ser/top.cpp:21:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (E:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\8.3.0\include\c++\bits/ios_base.h:104:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' (E:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\8.3.0\include\c++\bits/ios_base.h:100:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (E:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\8.3.0\include\c++\bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (E:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\8.3.0\include\c++\bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)' into 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' (E:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\8.3.0\include\c++\bits/ios_base.h:666:0)
+INFO: [HLS 214-178] Inlining function 'std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags)' into 'std::hex(std::ios_base&)' (E:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt\lib\gcc\x86_64-w64-mingw32\8.3.0\include\c++\bits/ios_base.h:1027:0)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 8 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (Big_Data_Ser/top.cpp:60:29)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 8 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (Big_Data_Ser/top.cpp:64:21)
+INFO: [HLS 214-115] Multiple burst reads of length 8 and bit width 8 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (Big_Data_Ser/top.cpp:93:38)
+INFO: [HLS 214-115] Multiple burst writes of length 8 and bit width 8 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (Big_Data_Ser/top.cpp:91:31)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 8 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (Big_Data_Ser/top.cpp:118:22)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.872 seconds; current allocated memory: 1.464 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.464 GB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dut -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.0.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.464 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.1.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.2.prechk.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 1.464 GB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.g.1.bc to D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.o.1.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'dut' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'dut' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' in function 'dut' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_38_1' (Big_Data_Ser/top.cpp:40) in function 'dut' automatically.
+Command         transform done; 0.156 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.o.1.tmp.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.222 seconds; current allocated memory: 1.464 GB.
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.o.2.bc -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col' 
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col2' 
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col2_base' 
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col' (Big_Data_Ser/top.cpp:49:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col' (Big_Data_Ser/top.cpp:53:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col2' (Big_Data_Ser/top.cpp:54:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col2_base' (Big_Data_Ser/top.cpp:55:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col' (Big_Data_Ser/top.cpp:64:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col' (Big_Data_Ser/top.cpp:96:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col2' (Big_Data_Ser/top.cpp:107:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'ptr_col' (Big_Data_Ser/top.cpp:118:22)
+Command         transform done; 0.237 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 1.464 GB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.616 sec.
+Command     elaborate done; 10.293 sec.
+Execute     ap_eval exec zip -j D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'dut' ...
+Execute       ap_set_top_model dut 
+Execute       get_model_list dut -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model dut 
+Execute       preproc_iomode -model dut_Pipeline_VITIS_LOOP_73_2 
+Execute       preproc_iomode -model dut_Pipeline_VITIS_LOOP_38_1 
+Execute       preproc_iomode -model dut_Pipeline_3 
+Execute       preproc_iomode -model dut_Pipeline_2 
+Execute       preproc_iomode -model dut_Pipeline_1 
+Execute       get_model_list dut -filter all-wo-channel 
+INFO-FLOW: Model list for configure: dut_Pipeline_1 dut_Pipeline_2 dut_Pipeline_3 dut_Pipeline_VITIS_LOOP_38_1 dut_Pipeline_VITIS_LOOP_73_2 dut
+INFO-FLOW: Configuring Module : dut_Pipeline_1 ...
+Execute       set_default_model dut_Pipeline_1 
+Execute       apply_spec_resource_limit dut_Pipeline_1 
+INFO-FLOW: Configuring Module : dut_Pipeline_2 ...
+Execute       set_default_model dut_Pipeline_2 
+Execute       apply_spec_resource_limit dut_Pipeline_2 
+INFO-FLOW: Configuring Module : dut_Pipeline_3 ...
+Execute       set_default_model dut_Pipeline_3 
+Execute       apply_spec_resource_limit dut_Pipeline_3 
+INFO-FLOW: Configuring Module : dut_Pipeline_VITIS_LOOP_38_1 ...
+Execute       set_default_model dut_Pipeline_VITIS_LOOP_38_1 
+Execute       apply_spec_resource_limit dut_Pipeline_VITIS_LOOP_38_1 
+INFO-FLOW: Configuring Module : dut_Pipeline_VITIS_LOOP_73_2 ...
+Execute       set_default_model dut_Pipeline_VITIS_LOOP_73_2 
+Execute       apply_spec_resource_limit dut_Pipeline_VITIS_LOOP_73_2 
+INFO-FLOW: Configuring Module : dut ...
+Execute       set_default_model dut 
+Execute       apply_spec_resource_limit dut 
+INFO-FLOW: Model list for preprocess: dut_Pipeline_1 dut_Pipeline_2 dut_Pipeline_3 dut_Pipeline_VITIS_LOOP_38_1 dut_Pipeline_VITIS_LOOP_73_2 dut
+INFO-FLOW: Preprocessing Module: dut_Pipeline_1 ...
+Execute       set_default_model dut_Pipeline_1 
+Execute       cdfg_preprocess -model dut_Pipeline_1 
+Execute       rtl_gen_preprocess dut_Pipeline_1 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_2 ...
+Execute       set_default_model dut_Pipeline_2 
+Execute       cdfg_preprocess -model dut_Pipeline_2 
+Execute       rtl_gen_preprocess dut_Pipeline_2 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_3 ...
+Execute       set_default_model dut_Pipeline_3 
+Execute       cdfg_preprocess -model dut_Pipeline_3 
+Execute       rtl_gen_preprocess dut_Pipeline_3 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_VITIS_LOOP_38_1 ...
+Execute       set_default_model dut_Pipeline_VITIS_LOOP_38_1 
+Execute       cdfg_preprocess -model dut_Pipeline_VITIS_LOOP_38_1 
+Execute       rtl_gen_preprocess dut_Pipeline_VITIS_LOOP_38_1 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_VITIS_LOOP_73_2 ...
+Execute       set_default_model dut_Pipeline_VITIS_LOOP_73_2 
+Execute       cdfg_preprocess -model dut_Pipeline_VITIS_LOOP_73_2 
+Execute       rtl_gen_preprocess dut_Pipeline_VITIS_LOOP_73_2 
+INFO-FLOW: Preprocessing Module: dut ...
+Execute       set_default_model dut 
+Execute       cdfg_preprocess -model dut 
+Execute       rtl_gen_preprocess dut 
+INFO-FLOW: Model list for synthesis: dut_Pipeline_1 dut_Pipeline_2 dut_Pipeline_3 dut_Pipeline_VITIS_LOOP_38_1 dut_Pipeline_VITIS_LOOP_73_2 dut
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_1 
+Execute       schedule -model dut_Pipeline_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.136 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_1.
+Execute       set_default_model dut_Pipeline_1 
+Execute       bind -model dut_Pipeline_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_2 
+Execute       schedule -model dut_Pipeline_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_2.
+Execute       set_default_model dut_Pipeline_2 
+Execute       bind -model dut_Pipeline_2 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_3 
+Execute       schedule -model dut_Pipeline_3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_3.
+Execute       set_default_model dut_Pipeline_3 
+Execute       bind -model dut_Pipeline_3 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_VITIS_LOOP_38_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_VITIS_LOOP_38_1 
+Execute       schedule -model dut_Pipeline_VITIS_LOOP_38_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 3 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 4 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 7 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 9 cycles).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 10, Depth = 35, loop 'VITIS_LOOP_38_1'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.142 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_VITIS_LOOP_38_1.
+Execute       set_default_model dut_Pipeline_VITIS_LOOP_38_1 
+Execute       bind -model dut_Pipeline_VITIS_LOOP_38_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.149 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_VITIS_LOOP_38_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_VITIS_LOOP_73_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_VITIS_LOOP_73_2 
+Execute       schedule -model dut_Pipeline_VITIS_LOOP_73_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_73_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 20, Final II = 20, Depth = 173, loop 'VITIS_LOOP_73_2'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.58 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.671 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.296 sec.
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_VITIS_LOOP_73_2.
+Execute       set_default_model dut_Pipeline_VITIS_LOOP_73_2 
+Execute       bind -model dut_Pipeline_VITIS_LOOP_73_2 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.225 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.553 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.169 sec.
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_VITIS_LOOP_73_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut 
+Execute       schedule -model dut 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.265 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.sched.adb -f 
+INFO-FLOW: Finish scheduling dut.
+Execute       set_default_model dut 
+Execute       bind -model dut 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.464 GB.
+Execute       syn_report -verbosereport -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.14 sec.
+Execute       db_write -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.bind.adb -f 
+INFO-FLOW: Finish binding dut.
+Execute       get_model_list dut -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess dut_Pipeline_1 
+Execute       rtl_gen_preprocess dut_Pipeline_2 
+Execute       rtl_gen_preprocess dut_Pipeline_3 
+Execute       rtl_gen_preprocess dut_Pipeline_VITIS_LOOP_38_1 
+Execute       rtl_gen_preprocess dut_Pipeline_VITIS_LOOP_73_2 
+Execute       rtl_gen_preprocess dut 
+INFO-FLOW: Model list for RTL generation: dut_Pipeline_1 dut_Pipeline_2 dut_Pipeline_3 dut_Pipeline_VITIS_LOOP_38_1 dut_Pipeline_VITIS_LOOP_73_2 dut
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_1 -top_prefix dut_ -sub_prefix dut_ -mg_file D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.175 seconds; current allocated memory: 1.464 GB.
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_1 -style xilinx -f -lang vhdl -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/vhdl/dut_dut_Pipeline_1 
+Execute       gen_rtl dut_Pipeline_1 -style xilinx -f -lang vlog -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/verilog/dut_dut_Pipeline_1 
+Execute       syn_report -csynth -model dut_Pipeline_1 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_1_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_1 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_1_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_1 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dut_Pipeline_1 -f -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.adb 
+Execute       db_write -model dut_Pipeline_1 -bindview -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_1 -p D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_2 -top_prefix dut_ -sub_prefix dut_ -mg_file D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.464 GB.
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_2 -style xilinx -f -lang vhdl -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/vhdl/dut_dut_Pipeline_2 
+Execute       gen_rtl dut_Pipeline_2 -style xilinx -f -lang vlog -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/verilog/dut_dut_Pipeline_2 
+Execute       syn_report -csynth -model dut_Pipeline_2 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_2_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_2 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_2_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_2 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dut_Pipeline_2 -f -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.adb 
+Execute       db_write -model dut_Pipeline_2 -bindview -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_2 -p D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_3 -top_prefix dut_ -sub_prefix dut_ -mg_file D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.464 GB.
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_3 -style xilinx -f -lang vhdl -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/vhdl/dut_dut_Pipeline_3 
+Execute       gen_rtl dut_Pipeline_3 -style xilinx -f -lang vlog -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/verilog/dut_dut_Pipeline_3 
+Execute       syn_report -csynth -model dut_Pipeline_3 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_3_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_3 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_3_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_3 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dut_Pipeline_3 -f -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.adb 
+Execute       db_write -model dut_Pipeline_3 -bindview -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_3 -p D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_VITIS_LOOP_38_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_VITIS_LOOP_38_1 -top_prefix dut_ -sub_prefix dut_ -mg_file D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dut_Pipeline_VITIS_LOOP_38_1' pipeline 'VITIS_LOOP_38_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_VITIS_LOOP_38_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 1.464 GB.
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_VITIS_LOOP_38_1 -style xilinx -f -lang vhdl -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/vhdl/dut_dut_Pipeline_VITIS_LOOP_38_1 
+Execute       gen_rtl dut_Pipeline_VITIS_LOOP_38_1 -style xilinx -f -lang vlog -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/verilog/dut_dut_Pipeline_VITIS_LOOP_38_1 
+Execute       syn_report -csynth -model dut_Pipeline_VITIS_LOOP_38_1 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_VITIS_LOOP_38_1_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_VITIS_LOOP_38_1 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_VITIS_LOOP_38_1_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_VITIS_LOOP_38_1 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dut_Pipeline_VITIS_LOOP_38_1 -f -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.adb 
+Execute       db_write -model dut_Pipeline_VITIS_LOOP_38_1 -bindview -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_VITIS_LOOP_38_1 -p D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_VITIS_LOOP_73_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_VITIS_LOOP_73_2 -top_prefix dut_ -sub_prefix dut_ -mg_file D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dut_Pipeline_VITIS_LOOP_73_2' pipeline 'VITIS_LOOP_73_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_VITIS_LOOP_73_2'.
+Command       create_rtl_model done; 0.107 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.388 seconds; current allocated memory: 1.464 GB.
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_VITIS_LOOP_73_2 -style xilinx -f -lang vhdl -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/vhdl/dut_dut_Pipeline_VITIS_LOOP_73_2 
+Execute       gen_rtl dut_Pipeline_VITIS_LOOP_73_2 -style xilinx -f -lang vlog -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/verilog/dut_dut_Pipeline_VITIS_LOOP_73_2 
+Execute       syn_report -csynth -model dut_Pipeline_VITIS_LOOP_73_2 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_VITIS_LOOP_73_2_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.242 sec.
+Execute       syn_report -rtlxml -model dut_Pipeline_VITIS_LOOP_73_2 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_Pipeline_VITIS_LOOP_73_2_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.131 sec.
+Execute       syn_report -verbosereport -model dut_Pipeline_VITIS_LOOP_73_2 -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.294 sec.
+Execute       db_write -model dut_Pipeline_VITIS_LOOP_73_2 -f -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.adb 
+Command       db_write done; 0.162 sec.
+Execute       db_write -model dut_Pipeline_VITIS_LOOP_73_2 -bindview -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_VITIS_LOOP_73_2 -p D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut -top_prefix  -sub_prefix dut_ -mg_file D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/src_buff' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/src_sz' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/dst_buff' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'src_buff', 'src_sz' and 'dst_buff' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_34ns_65_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.065 seconds; current allocated memory: 1.464 GB.
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut -istop -style xilinx -f -lang vhdl -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/vhdl/dut 
+Execute       gen_rtl dut -istop -style xilinx -f -lang vlog -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/verilog/dut 
+Execute       syn_report -csynth -model dut -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/dut_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.148 sec.
+Execute       db_write -model dut -f -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.adb 
+Execute       db_write -model dut -bindview -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut -p D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut 
+Execute       export_constraint_db -f -tool general -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.constraint.tcl 
+Execute       syn_report -designview -model dut -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.design.xml 
+Command       syn_report done; 0.315 sec.
+Execute       syn_report -csynthDesign -model dut -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model dut -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model dut -o D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks dut 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain dut 
+INFO-FLOW: Model list for RTL component generation: dut_Pipeline_1 dut_Pipeline_2 dut_Pipeline_3 dut_Pipeline_VITIS_LOOP_38_1 dut_Pipeline_VITIS_LOOP_73_2 dut
+INFO-FLOW: Handling components in module [dut_Pipeline_1] ... 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_2] ... 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_3] ... 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_VITIS_LOOP_38_1] ... 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_VITIS_LOOP_73_2] ... 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut] ... 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.compgen.tcl 
+INFO-FLOW: Found component dut_mul_32s_34ns_65_5_1.
+INFO-FLOW: Append model dut_mul_32s_34ns_65_5_1
+INFO-FLOW: Found component dut_ptr_col_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_ptr_col_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_ptr_col2_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_ptr_col2_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_gmem_m_axi.
+INFO-FLOW: Append model dut_gmem_m_axi
+INFO-FLOW: Found component dut_control_s_axi.
+INFO-FLOW: Append model dut_control_s_axi
+INFO-FLOW: Append model dut_Pipeline_1
+INFO-FLOW: Append model dut_Pipeline_2
+INFO-FLOW: Append model dut_Pipeline_3
+INFO-FLOW: Append model dut_Pipeline_VITIS_LOOP_38_1
+INFO-FLOW: Append model dut_Pipeline_VITIS_LOOP_73_2
+INFO-FLOW: Append model dut
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: dut_flow_control_loop_pipe_sequential_init dut_flow_control_loop_pipe_sequential_init dut_flow_control_loop_pipe_sequential_init dut_flow_control_loop_pipe_sequential_init dut_flow_control_loop_pipe_sequential_init dut_mul_32s_34ns_65_5_1 dut_ptr_col_RAM_AUTO_1R1W dut_ptr_col2_RAM_AUTO_1R1W dut_gmem_m_axi dut_control_s_axi dut_Pipeline_1 dut_Pipeline_2 dut_Pipeline_3 dut_Pipeline_VITIS_LOOP_38_1 dut_Pipeline_VITIS_LOOP_73_2 dut
+INFO-FLOW: Generating D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_mul_32s_34ns_65_5_1
+INFO-FLOW: To file: write model dut_ptr_col_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_ptr_col2_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_gmem_m_axi
+INFO-FLOW: To file: write model dut_control_s_axi
+INFO-FLOW: To file: write model dut_Pipeline_1
+INFO-FLOW: To file: write model dut_Pipeline_2
+INFO-FLOW: To file: write model dut_Pipeline_3
+INFO-FLOW: To file: write model dut_Pipeline_VITIS_LOOP_38_1
+INFO-FLOW: To file: write model dut_Pipeline_VITIS_LOOP_73_2
+INFO-FLOW: To file: write model dut
+INFO-FLOW: Generating D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=7.600 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/vhdl' dstVlogDir='D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/vlog' tclDir='D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db' modelList='dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_mul_32s_34ns_65_5_1
+dut_ptr_col_RAM_AUTO_1R1W
+dut_ptr_col2_RAM_AUTO_1R1W
+dut_gmem_m_axi
+dut_control_s_axi
+dut_Pipeline_1
+dut_Pipeline_2
+dut_Pipeline_3
+dut_Pipeline_VITIS_LOOP_38_1
+dut_Pipeline_VITIS_LOOP_73_2
+dut
+' expOnly='0'
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.compgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.compgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.compgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.compgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.compgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'dut_ptr_col_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dut_ptr_col2_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         source ./control.slave.tcl 
+Command       ap_source done; 0.105 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.91 seconds; current allocated memory: 1.464 GB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='dut_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute       get_config_op mul -impl 
+Execute       get_config_op mul -latency 
+Execute       get_config_op mul -precision 
+Execute       get_config_op add -impl 
+Execute       get_config_op add -latency 
+Execute       get_config_op add -precision 
+Execute       get_config_op sub -impl 
+Execute       get_config_op sub -latency 
+Execute       get_config_op sub -precision 
+Execute       get_config_op fadd -impl 
+Execute       get_config_op fadd -latency 
+Execute       get_config_op fadd -precision 
+Execute       get_config_op fsub -impl 
+Execute       get_config_op fsub -latency 
+Execute       get_config_op fsub -precision 
+Execute       get_config_op fdiv -impl 
+Execute       get_config_op fdiv -latency 
+Execute       get_config_op fdiv -precision 
+Execute       get_config_op fexp -impl 
+Execute       get_config_op fexp -latency 
+Execute       get_config_op fexp -precision 
+Execute       get_config_op flog -impl 
+Execute       get_config_op flog -latency 
+Execute       get_config_op flog -precision 
+Execute       get_config_op fmul -impl 
+Execute       get_config_op fmul -latency 
+Execute       get_config_op fmul -precision 
+Execute       get_config_op frsqrt -impl 
+Execute       get_config_op frsqrt -latency 
+Execute       get_config_op frsqrt -precision 
+Execute       get_config_op frecip -impl 
+Execute       get_config_op frecip -latency 
+Execute       get_config_op frecip -precision 
+Execute       get_config_op fsqrt -impl 
+Execute       get_config_op fsqrt -latency 
+Execute       get_config_op fsqrt -precision 
+Execute       get_config_op dadd -impl 
+Execute       get_config_op dadd -latency 
+Execute       get_config_op dadd -precision 
+Execute       get_config_op dsub -impl 
+Execute       get_config_op dsub -latency 
+Execute       get_config_op dsub -precision 
+Execute       get_config_op ddiv -impl 
+Execute       get_config_op ddiv -latency 
+Execute       get_config_op ddiv -precision 
+Execute       get_config_op dexp -impl 
+Execute       get_config_op dexp -latency 
+Execute       get_config_op dexp -precision 
+Execute       get_config_op dlog -impl 
+Execute       get_config_op dlog -latency 
+Execute       get_config_op dlog -precision 
+Execute       get_config_op dmul -impl 
+Execute       get_config_op dmul -latency 
+Execute       get_config_op dmul -precision 
+Execute       get_config_op drsqrt -impl 
+Execute       get_config_op drsqrt -latency 
+Execute       get_config_op drsqrt -precision 
+Execute       get_config_op drecip -impl 
+Execute       get_config_op drecip -latency 
+Execute       get_config_op drecip -precision 
+Execute       get_config_op dsqrt -impl 
+Execute       get_config_op dsqrt -latency 
+Execute       get_config_op dsqrt -precision 
+Execute       get_config_op hadd -impl 
+Execute       get_config_op hadd -latency 
+Execute       get_config_op hadd -precision 
+Execute       get_config_op hsub -impl 
+Execute       get_config_op hsub -latency 
+Execute       get_config_op hsub -precision 
+Execute       get_config_op hdiv -impl 
+Execute       get_config_op hdiv -latency 
+Execute       get_config_op hdiv -precision 
+Execute       get_config_op hmul -impl 
+Execute       get_config_op hmul -latency 
+Execute       get_config_op hmul -precision 
+Execute       get_config_op hsqrt -impl 
+Execute       get_config_op hsqrt -latency 
+Execute       get_config_op hsqrt -precision 
+Execute       get_config_op facc -impl 
+Execute       get_config_op facc -latency 
+Execute       get_config_op facc -precision 
+Execute       get_config_op fmacc -impl 
+Execute       get_config_op fmacc -latency 
+Execute       get_config_op fmacc -precision 
+Execute       get_config_op fmadd -impl 
+Execute       get_config_op fmadd -latency 
+Execute       get_config_op fmadd -precision 
+Execute       get_config_storage fifo -auto_srl_max_bits 
+Execute       get_config_storage fifo -auto_srl_max_depth 
+Execute       get_config_storage fifo -impl 
+Execute       get_solution -flow_target 
+Execute       get_config_array_partition -complete_threshold 
+Execute       get_config_array_partition -throughput_driven 
+Execute       get_config_compile -enable_auto_rewind 
+Execute       get_config_compile -ignore_long_run_time 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_compile -no_signed_zeros 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -unsafe_math_optimizations 
+Execute       get_config_dataflow -default_channel 
+Execute       get_config_dataflow -disable_fifo_sizing_opt 
+Execute       get_config_dataflow -fifo_depth 
+Execute       get_config_dataflow -override_user_fifo_depth 
+Execute       get_config_dataflow -scalar_fifo_depth 
+Execute       get_config_dataflow -start_fifo_depth 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_dataflow -strict_stable_sync 
+Execute       get_config_dataflow -task_level_fifo_depth 
+Execute       get_config_debug -directory 
+Execute       get_config_debug -enable 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -format 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ipname 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -rtl 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_max_timing_paths 
+Execute       get_config_export -vivado_optimization_level 
+Execute       get_config_export -vivado_pblock 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_export -vivado_report_level 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_interface -clock_enable 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_interface -m_axi_addr64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_buffer_impl 
+Execute       get_config_interface -m_axi_conservative_mode 
+Execute       get_config_interface -m_axi_flush_mode 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -register_io 
+Execute       get_config_interface -s_axilite_auto_restart_counter 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       get_config_interface -s_axilite_mailbox 
+Execute       get_config_interface -s_axilite_status_regs 
+Execute       get_config_interface -s_axilite_sw_reset 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -header 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -mult_keep_attribute 
+Execute       get_config_rtl -register_all_io 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -reset 
+Execute       get_config_rtl -reset_async 
+Execute       get_config_rtl -reset_level 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=D:/Documents/HLS/LabC/Big_Data_Ser/baseline/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_mul_32s_34ns_65_5_1
+dut_ptr_col_RAM_AUTO_1R1W
+dut_ptr_col2_RAM_AUTO_1R1W
+dut_gmem_m_axi
+dut_control_s_axi
+dut_Pipeline_1
+dut_Pipeline_2
+dut_Pipeline_3
+dut_Pipeline_VITIS_LOOP_38_1
+dut_Pipeline_VITIS_LOOP_73_2
+dut
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/top-io-be.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.compgen.dataonly.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.compgen.dataonly.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       get_config_export -vendor 
+Execute       get_config_export -library 
+Execute       get_config_export -version 
+Execute       get_config_export -ipname 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_1.tbgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_2.tbgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_3.tbgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_38_1.tbgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut_Pipeline_VITIS_LOOP_73_2.tbgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.constraint.tcl 
+Execute       sc_get_clocks dut 
+Execute       source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE dut LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE dut LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST dut MODULE2INSTS {dut dut dut_Pipeline_1 grp_dut_Pipeline_1_fu_130 dut_Pipeline_2 grp_dut_Pipeline_2_fu_136 dut_Pipeline_3 grp_dut_Pipeline_3_fu_142 dut_Pipeline_VITIS_LOOP_38_1 grp_dut_Pipeline_VITIS_LOOP_38_1_fu_148 dut_Pipeline_VITIS_LOOP_73_2 grp_dut_Pipeline_VITIS_LOOP_73_2_fu_160} INST2MODULE {dut dut grp_dut_Pipeline_1_fu_130 dut_Pipeline_1 grp_dut_Pipeline_2_fu_136 dut_Pipeline_2 grp_dut_Pipeline_3_fu_142 dut_Pipeline_3 grp_dut_Pipeline_VITIS_LOOP_38_1_fu_148 dut_Pipeline_VITIS_LOOP_38_1 grp_dut_Pipeline_VITIS_LOOP_73_2_fu_160 dut_Pipeline_VITIS_LOOP_73_2} INSTDATA {dut {DEPTH 1 CHILDREN {grp_dut_Pipeline_1_fu_130 grp_dut_Pipeline_2_fu_136 grp_dut_Pipeline_3_fu_142 grp_dut_Pipeline_VITIS_LOOP_38_1_fu_148 grp_dut_Pipeline_VITIS_LOOP_73_2_fu_160}} grp_dut_Pipeline_1_fu_130 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_2_fu_136 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_3_fu_142 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_VITIS_LOOP_38_1_fu_148 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_VITIS_LOOP_73_2_fu_160 {DEPTH 2 CHILDREN {}}} MODULEDATA {dut_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_39_fu_56_p2 SOURCE {} VARIABLE empty_39 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut_Pipeline_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_37_fu_56_p2 SOURCE {} VARIABLE empty_37 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut_Pipeline_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_35_fu_56_p2 SOURCE {} VARIABLE empty_35 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut_Pipeline_VITIS_LOOP_38_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cur_src_fu_254_p2 SOURCE Big_Data_Ser/top.cpp:36 VARIABLE cur_src LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln41_1_fu_289_p2 SOURCE Big_Data_Ser/top.cpp:41 VARIABLE add_ln41_1 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln42_fu_299_p2 SOURCE Big_Data_Ser/top.cpp:42 VARIABLE add_ln42 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ptr_col_d1 SOURCE Big_Data_Ser/top.cpp:53 VARIABLE add_ln53 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_236_p2 SOURCE {E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE ret_V LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_362_p2 SOURCE Big_Data_Ser/top.cpp:54 VARIABLE add_ln54 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln56_fu_372_p2 SOURCE Big_Data_Ser/top.cpp:56 VARIABLE add_ln56 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln60_fu_345_p2 SOURCE Big_Data_Ser/top.cpp:60 VARIABLE add_ln60 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln60_1_fu_386_p2 SOURCE Big_Data_Ser/top.cpp:60 VARIABLE add_ln60_1 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln64_fu_397_p2 SOURCE Big_Data_Ser/top.cpp:64 VARIABLE add_ln64 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_fu_403_p2 SOURCE Big_Data_Ser/top.cpp:49 VARIABLE add_ln49 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_236_p2 SOURCE {E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE ret_V_1 LOOP VITIS_LOOP_38_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut_Pipeline_VITIS_LOOP_73_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln73_fu_651_p2 SOURCE Big_Data_Ser/top.cpp:73 VARIABLE add_ln73 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln71_fu_697_p2 SOURCE Big_Data_Ser/top.cpp:71 VARIABLE add_ln71 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln71_1_fu_725_p2 SOURCE Big_Data_Ser/top.cpp:71 VARIABLE add_ln71_1 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cur_src_fu_661_p2 SOURCE Big_Data_Ser/top.cpp:71 VARIABLE cur_src LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln82_fu_672_p2 SOURCE Big_Data_Ser/top.cpp:82 VARIABLE add_ln82 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln82_1_fu_686_p2 SOURCE Big_Data_Ser/top.cpp:82 VARIABLE add_ln82_1 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_fu_740_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_1_fu_823_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_1 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_2_fu_864_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_2 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_3_fu_875_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_3 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_4_fu_883_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_4 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_5_fu_922_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_5 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_6_fu_930_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_6 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_7_fu_941_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_7 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_8_fu_969_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_8 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_9_fu_1036_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_9 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_10_fu_1044_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_10 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_11_fu_946_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_11 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_12_fu_983_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_12 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_13_fu_1055_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_13 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_14_fu_1083_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_14 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_15_fu_951_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_15 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_16_fu_997_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_16 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_17_fu_1060_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_17 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_18_fu_1097_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_18 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_19_fu_956_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_19 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_20_fu_1011_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_20 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_21_fu_1065_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_21 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_22_fu_1111_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_22 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_23_fu_961_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_23 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_24_fu_1025_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_24 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_25_fu_1070_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_25 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_26_fu_1125_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_26 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_27_fu_1075_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_27 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln104_28_fu_1139_p2 SOURCE Big_Data_Ser/top.cpp:104 VARIABLE add_ln104_28 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ptr_col2_d0 SOURCE Big_Data_Ser/top.cpp:107 VARIABLE add_ln107 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME val_fu_1150_p2 SOURCE Big_Data_Ser/top.cpp:111 VARIABLE val LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln112_fu_911_p2 SOURCE Big_Data_Ser/top.cpp:112 VARIABLE add_ln112 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln118_fu_855_p2 SOURCE Big_Data_Ser/top.cpp:118 VARIABLE add_ln118 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln93_fu_897_p2 SOURCE Big_Data_Ser/top.cpp:93 VARIABLE add_ln93 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln96_fu_845_p2 SOURCE Big_Data_Ser/top.cpp:96 VARIABLE add_ln96 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln122_fu_806_p2 SOURCE Big_Data_Ser/top.cpp:122 VARIABLE add_ln122 LOOP VITIS_LOOP_73_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME ptr_col_U SOURCE Big_Data_Ser/top.cpp:31 VARIABLE ptr_col LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME ptr_col2_U SOURCE Big_Data_Ser/top.cpp:32 VARIABLE ptr_col2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME ptr_col2_base_U SOURCE Big_Data_Ser/top.cpp:33 VARIABLE ptr_col2_base LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln41_fu_173_p2 SOURCE Big_Data_Ser/top.cpp:41 VARIABLE add_ln41 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_32s_34ns_65_5_1_U19 SOURCE {} VARIABLE mul LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME neg_mul_fu_212_p2 SOURCE {} VARIABLE neg_mul LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME neg_ti_fu_232_p2 SOURCE {} VARIABLE neg_ti LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub_fu_244_p2 SOURCE {} VARIABLE sub LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 3 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+Execute       send_msg_by_id INFO @200-1603@%s  and missed bursts 
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.585 seconds; current allocated memory: 1.464 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dut.
+INFO: [VLOG 209-307] Generating Verilog RTL for dut.
+Execute       syn_report -model dut -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 180.25 MHz
+Command     autosyn done; 5.686 sec.
+Command   csynth_design done; 16.038 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 16.038 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; 18.254 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace D:/Documents/HLS/LabC/Big_Data_Ser/baseline opened at Sun Nov 13 20:47:23 +0800 2022
+Execute     ap_set_clock -name default -period 7.6 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7.6ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: E:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: E:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 1.887 sec.
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.004 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 2.016 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.139 sec.
+Execute   create_clock -period 7.6 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 7.6 -name default 
+Execute   source ./Big_Data_Ser/baseline/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./Big_Data_Ser/baseline/directives.tcl
+Execute     set_directive_top -name dut dut 
+INFO: [HLS 200-1510] Running: set_directive_top -name dut dut 
+Execute   cosim_design 
+INFO: [HLS 200-1510] Running: cosim_design 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=7.600 (was NA)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: TB processing: D:/Documents/HLS/LabC/Big_Data_Ser/test.cpp D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/test.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/test.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/test.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 0.331 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: TB processing: D:/Documents/HLS/LabC/Big_Data_Ser/top.cpp D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/top.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/top.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/top.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 1.073 sec.
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 1.888 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source dataflow_monitor_API.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 26.467 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 35.428 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 35.428 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; 37.609 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace D:/Documents/HLS/LabC/Big_Data_Ser/baseline opened at Sun Nov 13 20:58:25 +0800 2022
+Execute     ap_set_clock -name default -period 7.6 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7.6ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: E:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: E:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 6.97 sec.
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command         ap_source done; 0.108 sec.
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command         ap_source done; 0.114 sec.
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.124 sec.
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.569 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 7.568 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 7.586 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.125 sec.
+Execute   create_clock -period 7.6 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 7.6 -name default 
+Execute   source ./Big_Data_Ser/baseline/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./Big_Data_Ser/baseline/directives.tcl
+Execute     set_directive_top -name dut dut 
+INFO: [HLS 200-1510] Running: set_directive_top -name dut dut 
+Execute   cosim_design -trace_level port 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level port 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=7.600 (was NA)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: TB processing: D:/Documents/HLS/LabC/Big_Data_Ser/test.cpp D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/test.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/test.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/test.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 1.834 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: TB processing: D:/Documents/HLS/LabC/Big_Data_Ser/top.cpp D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/top.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/top.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec E:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors D:/Documents/HLS/LabC/Big_Data_Ser/baseline/./sim/autowrap/testbench/top.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 1.112 sec.
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/global.setting.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 1.934 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+Execute     source D:/Documents/HLS/LabC/Big_Data_Ser/baseline/.autopilot/db/dut.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source dataflow_monitor_API.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 63.637 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 80.682 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 80.682 seconds; current allocated memory: 803.195 MB.
+Command ap_source done; 88.418 sec.
+Execute cleanup_all 

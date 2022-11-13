@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Big_Data_Ser" solutionName="baseline" date="2022-11-13T20:47:09.781+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 9 cycles).&#xD;&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html" projectName="Big_Data_Ser" solutionName="baseline" date="2022-11-13T20:47:06.165+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 7 cycles).&#xD;&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html" projectName="Big_Data_Ser" solutionName="baseline" date="2022-11-13T20:47:06.152+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 4 cycles).&#xD;&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html" projectName="Big_Data_Ser" solutionName="baseline" date="2022-11-13T20:47:06.145+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 3 cycles).&#xD;&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html" projectName="Big_Data_Ser" solutionName="baseline" date="2022-11-13T20:47:06.131+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 2 cycles).&#xD;&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html" projectName="Big_Data_Ser" solutionName="baseline" date="2022-11-13T20:47:06.124+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln38', Big_Data_Ser/top.cpp:38)) in the first pipeline iteration (II = 1 cycles).&#xD;&#xA;Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html" projectName="Big_Data_Ser" solutionName="baseline" date="2022-11-13T20:47:06.117+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

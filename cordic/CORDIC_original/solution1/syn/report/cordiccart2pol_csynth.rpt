@@ -1,0 +1,280 @@
+
+
+================================================================
+== Vitis HLS Report for 'cordiccart2pol'
+================================================================
+* Date:           Sun Nov 13 22:40:39 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CORDIC_original
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.35 ns|  3.903 ns|     1.44 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       42|       42|  0.225 us|  0.225 us|   18|   18|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                               |                              |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |            Instance           |            Module            |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |Block_entry39_proc9_U0         |Block_entry39_proc9           |        0|        0|       0 ns|       0 ns|    0|    0|       no|
+        |ini_trans_U0                   |ini_trans                     |       11|       11|  58.850 ns|  58.850 ns|   11|   11|       no|
+        |cordic_cr_unsigned_short_1_U0  |cordic_cr_unsigned_short_1_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_2_U0  |cordic_cr_unsigned_short_2_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_3_U0  |cordic_cr_unsigned_short_3_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_4_U0  |cordic_cr_unsigned_short_4_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_5_U0  |cordic_cr_unsigned_short_5_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_6_U0  |cordic_cr_unsigned_short_6_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |Block_entry3947_proc_U0        |Block_entry3947_proc          |       17|       17|  90.950 ns|  90.950 ns|   17|   17|       no|
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    114|    -|
+|FIFO             |        -|    -|    2277|   1564|    -|
+|Instance         |        0|    1|    4624|   5628|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    189|    -|
+|Register         |        -|    -|      21|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    1|    6922|   7495|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   ~0|       6|     14|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+------------------------------+---------+----+------+------+-----+
+    |            Instance           |            Module            | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------+------------------------------+---------+----+------+------+-----+
+    |Block_entry3947_proc_U0        |Block_entry3947_proc          |        0|   1|  2061|  2058|    0|
+    |Block_entry39_proc9_U0         |Block_entry39_proc9           |        0|   0|     3|    38|    0|
+    |cordic_cr_unsigned_short_1_U0  |cordic_cr_unsigned_short_1_s  |        0|   0|    82|   212|    0|
+    |cordic_cr_unsigned_short_2_U0  |cordic_cr_unsigned_short_2_s  |        0|   0|    80|   211|    0|
+    |cordic_cr_unsigned_short_3_U0  |cordic_cr_unsigned_short_3_s  |        0|   0|    78|   210|    0|
+    |cordic_cr_unsigned_short_4_U0  |cordic_cr_unsigned_short_4_s  |        0|   0|    76|   209|    0|
+    |cordic_cr_unsigned_short_5_U0  |cordic_cr_unsigned_short_5_s  |        0|   0|    74|   209|    0|
+    |cordic_cr_unsigned_short_6_U0  |cordic_cr_unsigned_short_6_s  |        0|   0|    72|   208|    0|
+    |ini_trans_U0                   |ini_trans                     |        0|   0|  2098|  2273|    0|
+    +-------------------------------+------------------------------+---------+----+------+------+-----+
+    |Total                          |                              |        0|   1|  4624|  5628|    0|
+    +-------------------------------+------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |            Name           | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |inStream_x_U               |        0|  99|   0|    -|     1|   32|       32|
+    |inStream_y_U               |        0|  99|   0|    -|     1|   32|       32|
+    |theta_pip_V_0_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_1_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_2_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_3_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_4_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_5_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_6_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_0_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_1_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_2_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_3_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_4_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_5_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_6_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_0_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_1_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_2_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_3_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_4_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_5_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_6_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                      |        0|2277|   0|    0|    44|  400|      736|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------------------+----------+----+---+----+------------+------------+
+    |                 Variable Name                 | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------------+----------+----+---+----+------------+------------+
+    |Block_entry3947_proc_U0_ap_start               |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_0_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_1_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_2_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_3_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_4_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_5_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_6_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_0_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_1_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_2_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_3_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_4_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_5_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_6_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_0_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_1_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_2_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_3_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_4_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_5_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_6_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                        |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_1_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_1_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_2_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_2_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_3_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_3_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_4_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_4_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_5_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_5_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_6_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_6_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |ini_trans_U0_ap_continue                       |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_0_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_1_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_2_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_3_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_4_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_5_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_6_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_0_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_1_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_2_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_3_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_4_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_5_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_6_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_0_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_1_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_2_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_3_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_4_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_5_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_6_c_channel      |        or|   0|  0|   2|           1|           1|
+    +-----------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                          |          |   0|  0| 114|          57|          57|
+    +-----------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                       | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_theta_pip_V_0_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_1_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_2_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_3_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_4_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_5_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_6_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_0_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_1_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_2_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_3_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_4_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_5_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_6_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_0_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_1_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_2_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_3_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_4_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_5_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_6_c_channel      |   9|          2|    1|          2|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                              | 189|         42|   21|         42|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------+---+----+-----+-----------+
+    |                        Name                       | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_theta_pip_V_0_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_1_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_2_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_3_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_4_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_5_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_6_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_0_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_1_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_2_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_3_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_4_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_5_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_6_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_0_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_1_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_2_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_3_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_4_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_5_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_6_c_channel      |  1|   0|    1|          0|
+    +---------------------------------------------------+---+----+-----+-----------+
+    |Total                                              | 21|   0|   21|          0|
+    +---------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+---------------+----------------+--------------+
+|   RTL Ports  | Dir | Bits|    Protocol   |  Source Object |    C Type    |
++--------------+-----+-----+---------------+----------------+--------------+
+|x             |   in|   32|        ap_none|               x|        scalar|
+|y             |   in|   32|        ap_none|               y|        scalar|
+|r             |  out|   32|         ap_vld|               r|       pointer|
+|r_ap_vld      |  out|    1|         ap_vld|               r|       pointer|
+|theta         |  out|   32|         ap_vld|           theta|       pointer|
+|theta_ap_vld  |  out|    1|         ap_vld|           theta|       pointer|
+|ap_clk        |   in|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_rst        |   in|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_start      |   in|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_done       |  out|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_ready      |  out|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_idle       |  out|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_continue   |   in|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
++--------------+-----+-----+---------------+----------------+--------------+
+

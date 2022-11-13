@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "cordiccart2pol",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "D:\/Documents\/HLS\/LabC\/cordic_orig-20221113T132330Z-001\/cordic_orig\/CORDIC_original\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "cordiccart2pol"
+              }]
+          }
+        },
+        {
+          "functionName": "cordiccart2pol",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "D:\/Documents\/HLS\/LabC\/cordic_orig-20221113T132330Z-001\/cordic_orig\/CORDIC_original\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "cordiccart2pol"
+              }]
+          }
+        }
+      ]
+    }]}

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Nov 13 20:59:00 2022
+# Process ID: 13800
+# Current directory: D:/Documents/HLS/LabC/Big_Data_Ser/baseline/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/dut/xsim_script.tcl}
+# Log file: D:/Documents/HLS/LabC/Big_Data_Ser/baseline/sim/verilog/xsim.log
+# Journal file: D:/Documents/HLS/LabC/Big_Data_Ser/baseline/sim/verilog\xsim.jou
+# Running On: LAPTOP-P5G6NA7F, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16931 MB
+#-----------------------------------------------------------
+source xsim.dir/dut/xsim_script.tcl
+open_wave_config dut_dataflow_ana.wcfg
+source dut.tcl

@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1668350440492">
+  <ports id="1" name="x" type="PortType" originalName="x" coreId="1630019628" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="y" type="PortType" originalName="y" coreId="1630019628" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="r" type="PortType" originalName="r" coreId="1630019628" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="4" name="theta" type="PortType" originalName="theta" coreId="694510703" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="63" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="65" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="85" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="110" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@ports.2"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@ports.3"/>
+  <edges id="130" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="131" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="132" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="133" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="134" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="135" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="136" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="356" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="357" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="354" RegionName="cordiccart2pol">
+    <basic_blocks id="60" name="cordiccart2pol" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="y_read" lineNumber="99" originalName="y" fileName="cordiccart2pol.cpp" fileDirectory=".." coreId="842080300" contextFuncName="cordiccart2pol" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="99" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>y</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="x_read" lineNumber="99" originalName="x" fileName="cordiccart2pol.cpp" fileDirectory=".." coreId="1630019628" contextFuncName="cordiccart2pol" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="99" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>x</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="_ln99" lineNumber="99" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="Block_entry39_proc9_U0" coreId="1935762015" contextFuncName="cordiccart2pol" opcode="call" m_display="0" m_delay="1.95" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="99" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <constName>Block_entry39_proc9</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="call_ret" lineNumber="128" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="ini_trans_U0" coreId="842080300" contextFuncName="cordiccart2pol" bitwidth="48" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="128" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>ini_trans</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="x_pip_V_0_c_channel" lineNumber="128" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="x_pip_V_0_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="128" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="y_pip_V_0_c_channel" lineNumber="128" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="y_pip_V_0_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="128" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="theta_pip_V_0_c_channel" lineNumber="128" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="theta_pip_V_0_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="128" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="call_ret1" lineNumber="145" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="cordic_cr_unsigned_short_1_U0" coreId="1919250543" contextFuncName="cordiccart2pol" bitwidth="48" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.95" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="145" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>cordic_cr_unsigned_short_1_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="x_pip_V_1_c_channel" lineNumber="145" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="x_pip_V_1_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="4.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="145" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="y_pip_V_1_c_channel" lineNumber="145" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="y_pip_V_1_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="4.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="145" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="theta_pip_V_1_c_channel" lineNumber="145" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="theta_pip_V_1_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="4.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="145" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="call_ret2" lineNumber="146" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="cordic_cr_unsigned_short_2_U0" coreId="543649385" contextFuncName="cordiccart2pol" bitwidth="48" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="1.95" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="146" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>cordic_cr_unsigned_short_2_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="x_pip_V_2_c_channel" lineNumber="146" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="x_pip_V_2_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="146" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="y_pip_V_2_c_channel" lineNumber="146" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="y_pip_V_2_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="146" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="theta_pip_V_2_c_channel" lineNumber="146" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="theta_pip_V_2_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="146" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="call_ret3" lineNumber="147" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="cordic_cr_unsigned_short_3_U0" coreId="1902080097" contextFuncName="cordiccart2pol" bitwidth="48" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="1.95" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="147" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>cordic_cr_unsigned_short_3_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="x_pip_V_3_c_channel" lineNumber="147" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="x_pip_V_3_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="147" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="y_pip_V_3_c_channel" lineNumber="147" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="y_pip_V_3_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="147" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="theta_pip_V_3_c_channel" lineNumber="147" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="theta_pip_V_3_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="147" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="call_ret4" lineNumber="148" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="cordic_cr_unsigned_short_4_U0" coreId="1970435104" contextFuncName="cordiccart2pol" bitwidth="48" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="1.95" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="148" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>cordic_cr_unsigned_short_4_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="x_pip_V_4_c_channel" lineNumber="148" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="x_pip_V_4_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="148" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="y_pip_V_4_c_channel" lineNumber="148" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="y_pip_V_4_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="148" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="theta_pip_V_4_c_channel" lineNumber="148" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="theta_pip_V_4_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="148" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="call_ret5" lineNumber="149" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="cordic_cr_unsigned_short_5_U0" coreId="1952917040" contextFuncName="cordiccart2pol" bitwidth="48" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="1.95" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="149" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>cordic_cr_unsigned_short_5_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="x_pip_V_5_c_channel" lineNumber="149" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="x_pip_V_5_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="12.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="149" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="y_pip_V_5_c_channel" lineNumber="149" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="y_pip_V_5_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="12.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="149" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="theta_pip_V_5_c_channel" lineNumber="149" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="theta_pip_V_5_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="12.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="149" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="call_ret6" lineNumber="150" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="cordic_cr_unsigned_short_6_U0" coreId="1885413435" contextFuncName="cordiccart2pol" bitwidth="48" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_delay="1.95" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="150" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>cordic_cr_unsigned_short_6_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="x_pip_V_6_c_channel" lineNumber="150" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="x_pip_V_6_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="150" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="y_pip_V_6_c_channel" lineNumber="150" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="y_pip_V_6_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="150" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="theta_pip_V_6_c_channel" lineNumber="150" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="theta_pip_V_6_c_channel_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="cordiccart2pol" bitwidth="16" opcode="extractvalue" nodeLabel="14.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="150" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln150" lineNumber="150" fileName="cordiccart2pol.cpp" fileDirectory=".." rtlName="Block_entry3947_proc_U0" coreId="2036689696" contextFuncName="cordiccart2pol" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.95" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="150" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>r</dataOutputObjs>
+        <dataOutputObjs>theta</dataOutputObjs>
+        <constName>Block_entry3947_proc</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln163" lineNumber="163" fileName="cordiccart2pol.cpp" fileDirectory=".." coreId="842080300" contextFuncName="cordiccart2pol" opcode="ret" nodeLabel="16.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="cordiccart2pol.cpp" linenumber="163" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="cordiccart2pol"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="cordiccart2pol.cpp">
+        <validLinenumbers>99</validLinenumbers>
+        <validLinenumbers>128</validLinenumbers>
+        <validLinenumbers>145</validLinenumbers>
+        <validLinenumbers>146</validLinenumbers>
+        <validLinenumbers>147</validLinenumbers>
+        <validLinenumbers>148</validLinenumbers>
+        <validLinenumbers>149</validLinenumbers>
+        <validLinenumbers>150</validLinenumbers>
+        <validLinenumbers>163</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <regnodes realName="theta_pip_V_1_c_channel_reg_270">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_pip_V_5_c_channel_reg_330">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="x_pip_V_0_c_channel_reg_245">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="x_pip_V_4_c_channel_reg_305">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="y_pip_V_4_c_channel_reg_310">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_pip_V_6_c_channel_reg_345">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="x_pip_V_3_c_channel_reg_290">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="y_pip_V_2_c_channel_reg_280">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="y_pip_V_1_c_channel_reg_265">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_pip_V_3_c_channel_reg_300">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_pip_V_4_c_channel_reg_315">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="x_pip_V_1_c_channel_reg_260">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="x_pip_V_5_c_channel_reg_320">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="y_pip_V_3_c_channel_reg_295">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_pip_V_0_c_channel_reg_255">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="y_pip_V_6_c_channel_reg_340">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="x_pip_V_2_c_channel_reg_275">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="x_pip_V_6_c_channel_reg_335">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="y_pip_V_5_c_channel_reg_325">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="y_pip_V_0_c_channel_reg_250">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_pip_V_2_c_channel_reg_285">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <expressionNodes realName="theta_pip_V_5_c_channel_fu_229">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_pip_V_3_c_channel_fu_197">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_pip_V_0_c_channel_fu_165">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="theta_pip_V_3_c_channel_fu_205">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_pip_V_5_c_channel_fu_221">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="theta_pip_V_1_c_channel_fu_181">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_pip_V_5_c_channel_fu_225">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_pip_V_1_c_channel_fu_173">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_pip_V_4_c_channel_fu_209">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_pip_V_3_c_channel_fu_201">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_pip_V_1_c_channel_fu_177">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_pip_V_2_c_channel_fu_185">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_pip_V_6_c_channel_fu_233">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="theta_pip_V_2_c_channel_fu_193">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="theta_pip_V_4_c_channel_fu_217">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_pip_V_6_c_channel_fu_237">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_pip_V_4_c_channel_fu_213">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="theta_pip_V_6_c_channel_fu_241">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="theta_pip_V_0_c_channel_fu_169">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_pip_V_0_c_channel_fu_161">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_pip_V_2_c_channel_fu_189">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Block_entry3947_proc_fu_146">
+    <nodeIds>58</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_ini_trans_fu_94">
+    <nodeIds>30</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_cordic_cr_unsigned_short_6_s_fu_139">
+    <nodeIds>54</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_cordic_cr_unsigned_short_5_s_fu_132">
+    <nodeIds>50</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_cordic_cr_unsigned_short_1_s_fu_104">
+    <nodeIds>34</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_cordic_cr_unsigned_short_4_s_fu_125">
+    <nodeIds>46</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="call_ln99_Block_entry39_proc9_fu_82">
+    <nodeIds>29</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_cordic_cr_unsigned_short_2_s_fu_111">
+    <nodeIds>38</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_cordic_cr_unsigned_short_3_s_fu_118">
+    <nodeIds>42</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="y_read_read_fu_70">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <ioNodes realName="x_read_read_fu_76">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="ini_phase_V" portID="100">
+    <nodeIds>30</nodeIds>
+  </memoryPorts>
+  <ioPorts name="r">
+    <contents name="call">
+      <nodeIds>58</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="theta">
+    <contents name="call">
+      <nodeIds>58</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="x">
+    <contents name="read">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="y">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="30" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="30" stage="1" latency="2"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="34" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="34" stage="1" latency="2"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="38" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="38" stage="1" latency="2"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="42" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="42" stage="1" latency="2"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="46" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="46" stage="1" latency="2"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="50" stage="2" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="50" stage="1" latency="2"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+    </states>
+    <states id="14">
+      <operations id="54" stage="2" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="54" stage="1" latency="2"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+    </states>
+    <states id="16">
+      <operations id="58" stage="2" latency="2"/>
+    </states>
+    <states id="17">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="2"/>
+      <operations id="59" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="cordiccart2pol" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="42" mMaxLatency="42" mIsDfPipe="true">
+      <basicBlocks>60</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.8/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.2/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.5/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.8/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.11/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.14/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.17/@sink.0/@inst">
+        <processe_list name="Block_entry39_proc9_U0" ssdmobj_id="29">
+          <pins>
+            <port name="x" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_116" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry39_proc9_U0" ssdmobj_id="29" object_id="_123"/>
+          </pins>
+          <pins>
+            <port name="y" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_117" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry39_proc9_U0" ssdmobj_id="29" object_id="_123"/>
+          </pins>
+        </processe_list>
+        <processe_list name="ini_trans_U0" ssdmobj_id="30"/>
+        <processe_list name="cordic_cr_unsigned_short_1_U0" ssdmobj_id="34"/>
+        <processe_list name="cordic_cr_unsigned_short_2_U0" ssdmobj_id="38"/>
+        <processe_list name="cordic_cr_unsigned_short_3_U0" ssdmobj_id="42"/>
+        <processe_list name="cordic_cr_unsigned_short_4_U0" ssdmobj_id="46"/>
+        <processe_list name="cordic_cr_unsigned_short_5_U0" ssdmobj_id="50"/>
+        <processe_list name="cordic_cr_unsigned_short_6_U0" ssdmobj_id="54"/>
+        <processe_list name="Block_entry3947_proc_U0" ssdmobj_id="58">
+          <pins>
+            <port name="r" dir="DirOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_118" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry3947_proc_U0" ssdmobj_id="58" object_id="_136"/>
+          </pins>
+          <pins>
+            <port name="theta" dir="DirOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_119" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry3947_proc_U0" ssdmobj_id="58" object_id="_136"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="1" bitwidth="32" suggested_type="0" suggested_depth="2" name="inStream_x" ssdmobj_id="5">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry39_proc9_U0" ssdmobj_id="29" object_id="_123"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ini_trans_U0" ssdmobj_id="30" object_id="_144"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="1" bitwidth="32" suggested_type="0" suggested_depth="2" name="inStream_y" ssdmobj_id="6">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry39_proc9_U0" ssdmobj_id="29" object_id="_123"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ini_trans_U0" ssdmobj_id="30" object_id="_144"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="x_pip_V_0_c_channel" ssdmobj_id="31">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ini_trans_U0" ssdmobj_id="30" object_id="_144"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_1_U0" ssdmobj_id="34" object_id="_155"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="y_pip_V_0_c_channel" ssdmobj_id="32">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ini_trans_U0" ssdmobj_id="30" object_id="_144"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_1_U0" ssdmobj_id="34" object_id="_155"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="theta_pip_V_0_c_channel" ssdmobj_id="33">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="ini_trans_U0" ssdmobj_id="30" object_id="_144"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_1_U0" ssdmobj_id="34" object_id="_155"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="x_pip_V_1_c_channel" ssdmobj_id="35">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_1_U0" ssdmobj_id="34" object_id="_155"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_2_U0" ssdmobj_id="38" object_id="_171"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="y_pip_V_1_c_channel" ssdmobj_id="36">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_1_U0" ssdmobj_id="34" object_id="_155"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_2_U0" ssdmobj_id="38" object_id="_171"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="theta_pip_V_1_c_channel" ssdmobj_id="37">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_1_U0" ssdmobj_id="34" object_id="_155"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_2_U0" ssdmobj_id="38" object_id="_171"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="x_pip_V_2_c_channel" ssdmobj_id="39">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_2_U0" ssdmobj_id="38" object_id="_171"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_3_U0" ssdmobj_id="42" object_id="_187"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="y_pip_V_2_c_channel" ssdmobj_id="40">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_2_U0" ssdmobj_id="38" object_id="_171"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_3_U0" ssdmobj_id="42" object_id="_187"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="theta_pip_V_2_c_channel" ssdmobj_id="41">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_2_U0" ssdmobj_id="38" object_id="_171"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_3_U0" ssdmobj_id="42" object_id="_187"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="x_pip_V_3_c_channel" ssdmobj_id="43">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_3_U0" ssdmobj_id="42" object_id="_187"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_4_U0" ssdmobj_id="46" object_id="_203"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="y_pip_V_3_c_channel" ssdmobj_id="44">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_3_U0" ssdmobj_id="42" object_id="_187"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_4_U0" ssdmobj_id="46" object_id="_203"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="theta_pip_V_3_c_channel" ssdmobj_id="45">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_3_U0" ssdmobj_id="42" object_id="_187"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_4_U0" ssdmobj_id="46" object_id="_203"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="x_pip_V_4_c_channel" ssdmobj_id="47">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_4_U0" ssdmobj_id="46" object_id="_203"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_5_U0" ssdmobj_id="50" object_id="_219"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="y_pip_V_4_c_channel" ssdmobj_id="48">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_4_U0" ssdmobj_id="46" object_id="_203"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_5_U0" ssdmobj_id="50" object_id="_219"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="theta_pip_V_4_c_channel" ssdmobj_id="49">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_4_U0" ssdmobj_id="46" object_id="_203"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_5_U0" ssdmobj_id="50" object_id="_219"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="x_pip_V_5_c_channel" ssdmobj_id="51">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_5_U0" ssdmobj_id="50" object_id="_219"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_6_U0" ssdmobj_id="54" object_id="_235"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="y_pip_V_5_c_channel" ssdmobj_id="52">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_5_U0" ssdmobj_id="50" object_id="_219"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_6_U0" ssdmobj_id="54" object_id="_235"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="theta_pip_V_5_c_channel" ssdmobj_id="53">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_5_U0" ssdmobj_id="50" object_id="_219"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_6_U0" ssdmobj_id="54" object_id="_235"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="x_pip_V_6_c_channel" ssdmobj_id="55">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_6_U0" ssdmobj_id="54" object_id="_235"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry3947_proc_U0" ssdmobj_id="58" object_id="_136"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="y_pip_V_6_c_channel" ssdmobj_id="56">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_6_U0" ssdmobj_id="54" object_id="_235"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry3947_proc_U0" ssdmobj_id="58" object_id="_136"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="16" suggested_type="1" suggested_depth="2" name="theta_pip_V_6_c_channel" ssdmobj_id="57">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="cordic_cr_unsigned_short_6_U0" ssdmobj_id="54" object_id="_235"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_entry3947_proc_U0" ssdmobj_id="58" object_id="_136"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

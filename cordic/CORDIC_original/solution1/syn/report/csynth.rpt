@@ -1,0 +1,235 @@
+
+
+================================================================
+== Synthesis Summary Report of 'cordiccart2pol'
+================================================================
++ General Information: 
+    * Date:           Sun Nov 13 22:40:40 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        CORDIC_original
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+    |             Modules             | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |           |            |     |
+    |             & Loops             | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |     LUT    | URAM|
+    +---------------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+    |+ cordiccart2pol*                |     -|  0.01|       42|  224.700|         -|       18|     -|  dataflow|     -|  1 (~0%)|  6922 (6%)|  7495 (14%)|    -|
+    | + Block_entry39_proc9           |     -|  1.96|        0|    0.000|         -|        0|     -|        no|     -|        -|    3 (~0%)|    38 (~0%)|    -|
+    | + ini_trans                     |     -|  0.03|       11|   58.850|         -|       11|     -|        no|     -|        -|  2098 (1%)|   2273 (4%)|    -|
+    | + cordic_cr_unsigned_short_1_s  |     -|  1.03|        1|    5.350|         -|        1|     -|        no|     -|        -|   82 (~0%)|   212 (~0%)|    -|
+    | + cordic_cr_unsigned_short_2_s  |     -|  1.03|        1|    5.350|         -|        1|     -|        no|     -|        -|   80 (~0%)|   211 (~0%)|    -|
+    | + cordic_cr_unsigned_short_3_s  |     -|  1.03|        1|    5.350|         -|        1|     -|        no|     -|        -|   78 (~0%)|   210 (~0%)|    -|
+    | + cordic_cr_unsigned_short_4_s  |     -|  1.03|        1|    5.350|         -|        1|     -|        no|     -|        -|   76 (~0%)|   209 (~0%)|    -|
+    | + cordic_cr_unsigned_short_5_s  |     -|  1.03|        1|    5.350|         -|        1|     -|        no|     -|        -|   74 (~0%)|   209 (~0%)|    -|
+    | + cordic_cr_unsigned_short_6_s  |     -|  1.03|        1|    5.350|         -|        1|     -|        no|     -|        -|   72 (~0%)|   208 (~0%)|    -|
+    | + Block_entry3947_proc          |     -|  0.01|       17|   90.950|         -|       17|     -|        no|     -|  1 (~0%)|  2061 (1%)|   2058 (3%)|    -|
+    +---------------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| r         | ap_none | 32       |
+| theta     | ap_none | 32       |
+| x         | ap_none | 32       |
+| y         | ap_none | 32       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------------------------------------------+
+| Interface | Type          | Ports                                         |
++-----------+---------------+-----------------------------------------------+
+| ap_clk    | clock         | ap_clk                                        |
+| ap_rst    | reset         | ap_rst                                        |
+| ap_ctrl   | ap_ctrl_chain | ap_continue ap_done ap_idle ap_ready ap_start |
++-----------+---------------+-----------------------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| x        | in        | float    |
+| y        | in        | float    |
+| r        | out       | float*   |
+| theta    | out       | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| x        | x            | port    |
+| y        | y            | port    |
+| r        | r            | port    |
+| r        | r_ap_vld     | port    |
+| theta    | theta        | port    |
+| theta    | theta_ap_vld | port    |
++----------+--------------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------+-----+--------+-------------------------+------+--------+---------+
+| Name                            | DSP | Pragma | Variable                | Op   | Impl   | Latency |
++---------------------------------+-----+--------+-------------------------+------+--------+---------+
+| + cordiccart2pol                | 1   |        |                         |      |        |         |
+|   x_pip_V_0_c_channel_U         | -   |        | x_pip_V_0_c_channel     | fifo | srl    | 0       |
+|   y_pip_V_0_c_channel_U         | -   |        | y_pip_V_0_c_channel     | fifo | srl    | 0       |
+|   theta_pip_V_0_c_channel_U     | -   |        | theta_pip_V_0_c_channel | fifo | srl    | 0       |
+|   x_pip_V_1_c_channel_U         | -   |        | x_pip_V_1_c_channel     | fifo | srl    | 0       |
+|   y_pip_V_1_c_channel_U         | -   |        | y_pip_V_1_c_channel     | fifo | srl    | 0       |
+|   theta_pip_V_1_c_channel_U     | -   |        | theta_pip_V_1_c_channel | fifo | srl    | 0       |
+|   x_pip_V_2_c_channel_U         | -   |        | x_pip_V_2_c_channel     | fifo | srl    | 0       |
+|   y_pip_V_2_c_channel_U         | -   |        | y_pip_V_2_c_channel     | fifo | srl    | 0       |
+|   theta_pip_V_2_c_channel_U     | -   |        | theta_pip_V_2_c_channel | fifo | srl    | 0       |
+|   x_pip_V_3_c_channel_U         | -   |        | x_pip_V_3_c_channel     | fifo | srl    | 0       |
+|   y_pip_V_3_c_channel_U         | -   |        | y_pip_V_3_c_channel     | fifo | srl    | 0       |
+|   theta_pip_V_3_c_channel_U     | -   |        | theta_pip_V_3_c_channel | fifo | srl    | 0       |
+|   x_pip_V_4_c_channel_U         | -   |        | x_pip_V_4_c_channel     | fifo | srl    | 0       |
+|   y_pip_V_4_c_channel_U         | -   |        | y_pip_V_4_c_channel     | fifo | srl    | 0       |
+|   theta_pip_V_4_c_channel_U     | -   |        | theta_pip_V_4_c_channel | fifo | srl    | 0       |
+|   x_pip_V_5_c_channel_U         | -   |        | x_pip_V_5_c_channel     | fifo | srl    | 0       |
+|   y_pip_V_5_c_channel_U         | -   |        | y_pip_V_5_c_channel     | fifo | srl    | 0       |
+|   theta_pip_V_5_c_channel_U     | -   |        | theta_pip_V_5_c_channel | fifo | srl    | 0       |
+|   x_pip_V_6_c_channel_U         | -   |        | x_pip_V_6_c_channel     | fifo | srl    | 0       |
+|   y_pip_V_6_c_channel_U         | -   |        | y_pip_V_6_c_channel     | fifo | srl    | 0       |
+|   theta_pip_V_6_c_channel_U     | -   |        | theta_pip_V_6_c_channel | fifo | srl    | 0       |
+|  + ini_trans                    | 0   |        |                         |      |        |         |
+|    man_V_2_fu_201_p2            | -   |        | man_V_2                 | sub  | fabric | 0       |
+|    F2_fu_212_p2                 | -   |        | F2                      | sub  | fabric | 0       |
+|    add_ln616_fu_282_p2          | -   |        | add_ln616               | add  | fabric | 0       |
+|    sub_ln616_fu_287_p2          | -   |        | sub_ln616               | sub  | fabric | 0       |
+|    add_ln626_fu_566_p2          | -   |        | add_ln626               | add  | fabric | 0       |
+|    add_ln630_fu_335_p2          | -   |        | add_ln630               | add  | fabric | 0       |
+|    sub_ln630_fu_346_p2          | -   |        | sub_ln630               | sub  | fabric | 0       |
+|    add_ln423_fu_690_p2          | -   |        | add_ln423               | add  | fabric | 0       |
+|    man_V_3_fu_246_p2            | -   |        | man_V_3                 | sub  | fabric | 0       |
+|    F2_1_fu_257_p2               | -   |        | F2_1                    | sub  | fabric | 0       |
+|    add_ln616_1_fu_356_p2        | -   |        | add_ln616_1             | add  | fabric | 0       |
+|    sub_ln616_1_fu_361_p2        | -   |        | sub_ln616_1             | sub  | fabric | 0       |
+|    add_ln626_1_fu_633_p2        | -   |        | add_ln626_1             | add  | fabric | 0       |
+|    add_ln630_1_fu_409_p2        | -   |        | add_ln630_1             | add  | fabric | 0       |
+|    sub_ln630_1_fu_420_p2        | -   |        | sub_ln630_1             | sub  | fabric | 0       |
+|    add_ln423_1_fu_749_p2        | -   |        | add_ln423_1             | add  | fabric | 0       |
+|  + cordic_cr_unsigned_short_1_s | 0   |        |                         |      |        |         |
+|    sub_ln859_fu_79_p2           | -   |        | sub_ln859               | sub  | fabric | 0       |
+|    add_ln859_fu_84_p2           | -   |        | add_ln859               | add  | fabric | 0       |
+|    add_ln859_11_fu_96_p2        | -   |        | add_ln859_11            | add  | fabric | 0       |
+|    sub_ln859_6_fu_101_p2        | -   |        | sub_ln859_6             | sub  | fabric | 0       |
+|    add_ln859_12_fu_128_p2       | -   |        | add_ln859_12            | add  | fabric | 0       |
+|  + cordic_cr_unsigned_short_2_s | 0   |        |                         |      |        |         |
+|    sub_ln859_fu_80_p2           | -   |        | sub_ln859               | sub  | fabric | 0       |
+|    add_ln859_fu_85_p2           | -   |        | add_ln859               | add  | fabric | 0       |
+|    add_ln859_9_fu_97_p2         | -   |        | add_ln859_9             | add  | fabric | 0       |
+|    sub_ln859_5_fu_102_p2        | -   |        | sub_ln859_5             | sub  | fabric | 0       |
+|    add_ln859_10_fu_129_p2       | -   |        | add_ln859_10            | add  | fabric | 0       |
+|  + cordic_cr_unsigned_short_3_s | 0   |        |                         |      |        |         |
+|    sub_ln859_fu_81_p2           | -   |        | sub_ln859               | sub  | fabric | 0       |
+|    add_ln859_fu_86_p2           | -   |        | add_ln859               | add  | fabric | 0       |
+|    add_ln859_7_fu_98_p2         | -   |        | add_ln859_7             | add  | fabric | 0       |
+|    sub_ln859_4_fu_103_p2        | -   |        | sub_ln859_4             | sub  | fabric | 0       |
+|    add_ln859_8_fu_130_p2        | -   |        | add_ln859_8             | add  | fabric | 0       |
+|  + cordic_cr_unsigned_short_4_s | 0   |        |                         |      |        |         |
+|    sub_ln859_fu_82_p2           | -   |        | sub_ln859               | sub  | fabric | 0       |
+|    add_ln859_fu_87_p2           | -   |        | add_ln859               | add  | fabric | 0       |
+|    add_ln859_5_fu_99_p2         | -   |        | add_ln859_5             | add  | fabric | 0       |
+|    sub_ln859_3_fu_104_p2        | -   |        | sub_ln859_3             | sub  | fabric | 0       |
+|    add_ln859_6_fu_131_p2        | -   |        | add_ln859_6             | add  | fabric | 0       |
+|  + cordic_cr_unsigned_short_5_s | 0   |        |                         |      |        |         |
+|    sub_ln859_fu_83_p2           | -   |        | sub_ln859               | sub  | fabric | 0       |
+|    add_ln859_fu_88_p2           | -   |        | add_ln859               | add  | fabric | 0       |
+|    add_ln859_3_fu_100_p2        | -   |        | add_ln859_3             | add  | fabric | 0       |
+|    sub_ln859_2_fu_105_p2        | -   |        | sub_ln859_2             | sub  | fabric | 0       |
+|    add_ln859_4_fu_132_p2        | -   |        | add_ln859_4             | add  | fabric | 0       |
+|  + cordic_cr_unsigned_short_6_s | 0   |        |                         |      |        |         |
+|    sub_ln859_fu_84_p2           | -   |        | sub_ln859               | sub  | fabric | 0       |
+|    add_ln859_fu_89_p2           | -   |        | add_ln859               | add  | fabric | 0       |
+|    add_ln859_1_fu_101_p2        | -   |        | add_ln859_1             | add  | fabric | 0       |
+|    sub_ln859_1_fu_106_p2        | -   |        | sub_ln859_1             | sub  | fabric | 0       |
+|    add_ln859_2_fu_133_p2        | -   |        | add_ln859_2             | add  | fabric | 0       |
+|  + Block_entry3947_proc         | 1   |        |                         |      |        |         |
+|    sub_ln859_fu_233_p2          | -   |        | sub_ln859               | sub  | fabric | 0       |
+|    add_ln859_fu_238_p2          | -   |        | add_ln859               | add  | fabric | 0       |
+|    add_ln859_13_fu_250_p2       | -   |        | add_ln859_13            | add  | fabric | 0       |
+|    sub_ln859_7_fu_255_p2        | -   |        | sub_ln859_7             | sub  | fabric | 0       |
+|    mul_mul_16s_10ns_26_4_1_U39  | 1   |        | r_V_4                   | mul  | dsp48  | 3       |
+|    add_ln423_fu_333_p2          | -   |        | add_ln423               | add  | fabric | 0       |
+|    tmp_V_fu_355_p2              | -   |        | tmp_V                   | sub  | fabric | 0       |
+|    sub_ln1145_fu_405_p2         | -   |        | sub_ln1145              | sub  | fabric | 0       |
+|    lsb_index_fu_481_p2          | -   |        | lsb_index               | add  | fabric | 0       |
+|    sub_ln1148_fu_496_p2         | -   |        | sub_ln1148              | sub  | fabric | 0       |
+|    add_ln1150_fu_585_p2         | -   |        | add_ln1150              | add  | fabric | 0       |
+|    add_ln1159_fu_501_p2         | -   |        | add_ln1159              | add  | fabric | 0       |
+|    sub_ln1160_fu_506_p2         | -   |        | sub_ln1160              | sub  | fabric | 0       |
+|    m_3_fu_753_p2                | -   |        | m_3                     | add  | fabric | 0       |
+|    tmp_V_4_fu_360_p2            | -   |        | tmp_V_4                 | sub  | fabric | 0       |
+|    sub_ln1145_1_fu_463_p2       | -   |        | sub_ln1145_1            | sub  | fabric | 0       |
+|    lsb_index_1_fu_511_p2        | -   |        | lsb_index_1             | add  | fabric | 0       |
+|    sub_ln1148_1_fu_526_p2       | -   |        | sub_ln1148_1            | sub  | fabric | 0       |
+|    add_ln1150_1_fu_687_p2       | -   |        | add_ln1150_1            | add  | fabric | 0       |
+|    add_ln1159_1_fu_531_p2       | -   |        | add_ln1159_1            | add  | fabric | 0       |
+|    sub_ln1160_1_fu_536_p2       | -   |        | sub_ln1160_1            | sub  | fabric | 0       |
+|    m_8_fu_785_p2                | -   |        | m_8                     | add  | fabric | 0       |
++---------------------------------+-----+--------+-------------------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------+------+------+--------+-------------+---------+------+---------+
+| Name             | BRAM | URAM | Pragma | Variable    | Storage | Impl | Latency |
++------------------+------+------+--------+-------------+---------+------+---------+
+| + cordiccart2pol | 0    | 0    |        |             |         |      |         |
+|  + ini_trans     | 0    | 0    |        |             |         |      |         |
+|    ini_phase_V_U | -    | -    |        | ini_phase_V | rom_1p  | auto | 1       |
++------------------+------+------+--------+-------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++-----------+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| Type      | Options                                          | Location                                    | Messages                                    |
++-----------+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| interface | mode=s_axilite register register_mode=off port=x | cordiccart2pol.cpp:102 in cordiccart2pol, x | unexpected pragma parameter 'register_mode' |
+| interface | mode=s_axilite register register_mode=off port=y | cordiccart2pol.cpp:103 in cordiccart2pol, y | unexpected pragma parameter 'register_mode' |
++-----------+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+--------------------------------------+--------------------------------------------------+
+| Type      | Options                              | Location                                         |
++-----------+--------------------------------------+--------------------------------------------------+
+| unroll    |                                      | cordiccart2pol.cpp:73 in cordic_cr               |
+| interface | mode=ap_ctrl_chain port=return       | cordiccart2pol.cpp:105 in cordiccart2pol, return |
+| stream    | variable = inStream_x depth = 1      | cordiccart2pol.cpp:113 in cordiccart2pol         |
+| stream    | variable = inStream_y depth = 1      | cordiccart2pol.cpp:114 in cordiccart2pol         |
+| stream    | variable = outStream_r depth = 1     | cordiccart2pol.cpp:115 in cordiccart2pol         |
+| stream    | variable = outStream_theta depth = 1 | cordiccart2pol.cpp:116 in cordiccart2pol         |
+| inline    |                                      | cordiccart2pol.cpp:117 in cordiccart2pol         |
+| dataflow  |                                      | cordiccart2pol.cpp:118 in cordiccart2pol         |
++-----------+--------------------------------------+--------------------------------------------------+
+
+

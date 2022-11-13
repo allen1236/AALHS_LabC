@@ -1,0 +1,1761 @@
+
+
+================================================================
+== Vitis HLS Report for 'cordiccart2pol'
+================================================================
+* Date:           Sun Nov 13 22:40:39 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        CORDIC_original
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.35 ns|  3.903 ns|     1.44 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       42|       42|  0.225 us|  0.225 us|   18|   18|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                               |                              |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |            Instance           |            Module            |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |Block_entry39_proc9_U0         |Block_entry39_proc9           |        0|        0|       0 ns|       0 ns|    0|    0|       no|
+        |ini_trans_U0                   |ini_trans                     |       11|       11|  58.850 ns|  58.850 ns|   11|   11|       no|
+        |cordic_cr_unsigned_short_1_U0  |cordic_cr_unsigned_short_1_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_2_U0  |cordic_cr_unsigned_short_2_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_3_U0  |cordic_cr_unsigned_short_3_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_4_U0  |cordic_cr_unsigned_short_4_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_5_U0  |cordic_cr_unsigned_short_5_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |cordic_cr_unsigned_short_6_U0  |cordic_cr_unsigned_short_6_s  |        1|        1|   5.350 ns|   5.350 ns|    1|    1|       no|
+        |Block_entry3947_proc_U0        |Block_entry3947_proc          |       17|       17|  90.950 ns|  90.950 ns|   17|   17|       no|
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    114|    -|
+|FIFO             |        -|    -|    2277|   1564|    -|
+|Instance         |        0|    1|    4624|   5628|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    189|    -|
+|Register         |        -|    -|      21|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    1|    6922|   7495|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   ~0|       6|     14|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+------------------------------+---------+----+------+------+-----+
+    |            Instance           |            Module            | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------+------------------------------+---------+----+------+------+-----+
+    |Block_entry3947_proc_U0        |Block_entry3947_proc          |        0|   1|  2061|  2058|    0|
+    |Block_entry39_proc9_U0         |Block_entry39_proc9           |        0|   0|     3|    38|    0|
+    |cordic_cr_unsigned_short_1_U0  |cordic_cr_unsigned_short_1_s  |        0|   0|    82|   212|    0|
+    |cordic_cr_unsigned_short_2_U0  |cordic_cr_unsigned_short_2_s  |        0|   0|    80|   211|    0|
+    |cordic_cr_unsigned_short_3_U0  |cordic_cr_unsigned_short_3_s  |        0|   0|    78|   210|    0|
+    |cordic_cr_unsigned_short_4_U0  |cordic_cr_unsigned_short_4_s  |        0|   0|    76|   209|    0|
+    |cordic_cr_unsigned_short_5_U0  |cordic_cr_unsigned_short_5_s  |        0|   0|    74|   209|    0|
+    |cordic_cr_unsigned_short_6_U0  |cordic_cr_unsigned_short_6_s  |        0|   0|    72|   208|    0|
+    |ini_trans_U0                   |ini_trans                     |        0|   0|  2098|  2273|    0|
+    +-------------------------------+------------------------------+---------+----+------+------+-----+
+    |Total                          |                              |        0|   1|  4624|  5628|    0|
+    +-------------------------------+------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |            Name           | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |inStream_x_U               |        0|  99|   0|    -|     1|   32|       32|
+    |inStream_y_U               |        0|  99|   0|    -|     1|   32|       32|
+    |theta_pip_V_0_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_1_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_2_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_3_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_4_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_5_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |theta_pip_V_6_c_channel_U  |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_0_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_1_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_2_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_3_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_4_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_5_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |x_pip_V_6_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_0_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_1_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_2_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_3_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_4_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_5_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    |y_pip_V_6_c_channel_U      |        0|  99|   0|    -|     2|   16|       32|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                      |        0|2277|   0|    0|    44|  400|      736|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------------------+----------+----+---+----+------------+------------+
+    |                 Variable Name                 | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------------+----------+----+---+----+------------+------------+
+    |Block_entry3947_proc_U0_ap_start               |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_0_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_1_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_2_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_3_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_4_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_5_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_theta_pip_V_6_c_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_0_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_1_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_2_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_3_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_4_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_5_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_x_pip_V_6_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_0_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_1_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_2_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_3_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_4_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_5_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_y_pip_V_6_c_channel            |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                        |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_1_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_1_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_2_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_2_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_3_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_3_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_4_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_4_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_5_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_5_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_6_U0_ap_continue      |       and|   0|  0|   2|           1|           1|
+    |cordic_cr_unsigned_short_6_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |ini_trans_U0_ap_continue                       |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_0_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_1_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_2_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_3_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_4_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_5_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_theta_pip_V_6_c_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_0_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_1_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_2_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_3_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_4_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_5_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_x_pip_V_6_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_0_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_1_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_2_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_3_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_4_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_5_c_channel      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_y_pip_V_6_c_channel      |        or|   0|  0|   2|           1|           1|
+    +-----------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                          |          |   0|  0| 114|          57|          57|
+    +-----------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                       | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_theta_pip_V_0_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_1_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_2_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_3_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_4_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_5_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_theta_pip_V_6_c_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_0_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_1_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_2_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_3_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_4_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_5_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_x_pip_V_6_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_0_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_1_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_2_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_3_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_4_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_5_c_channel      |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_y_pip_V_6_c_channel      |   9|          2|    1|          2|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                              | 189|         42|   21|         42|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------+---+----+-----+-----------+
+    |                        Name                       | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_theta_pip_V_0_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_1_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_2_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_3_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_4_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_5_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_theta_pip_V_6_c_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_0_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_1_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_2_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_3_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_4_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_5_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_x_pip_V_6_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_0_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_1_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_2_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_3_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_4_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_5_c_channel      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_y_pip_V_6_c_channel      |  1|   0|    1|          0|
+    +---------------------------------------------------+---+----+-----+-----------+
+    |Total                                              | 21|   0|   21|          0|
+    +---------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+---------------+----------------+--------------+
+|   RTL Ports  | Dir | Bits|    Protocol   |  Source Object |    C Type    |
++--------------+-----+-----+---------------+----------------+--------------+
+|x             |   in|   32|        ap_none|               x|        scalar|
+|y             |   in|   32|        ap_none|               y|        scalar|
+|r             |  out|   32|         ap_vld|               r|       pointer|
+|r_ap_vld      |  out|    1|         ap_vld|               r|       pointer|
+|theta         |  out|   32|         ap_vld|           theta|       pointer|
+|theta_ap_vld  |  out|    1|         ap_vld|           theta|       pointer|
+|ap_clk        |   in|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_rst        |   in|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_start      |   in|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_done       |  out|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_ready      |  out|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_idle       |  out|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
+|ap_continue   |   in|    1|  ap_ctrl_chain|  cordiccart2pol|  return value|
++--------------+-----+-----+---------------+----------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 17, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.95>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%y_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %y" [cordiccart2pol.cpp:99]   --->   Operation 18 'read' 'y_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %x" [cordiccart2pol.cpp:99]   --->   Operation 19 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.95ns)   --->   "%call_ln99 = call void @Block_entry39_proc9, i32 %x_read, i32 %y_read, i32 %inStream_x, i32 %inStream_y" [cordiccart2pol.cpp:99]   --->   Operation 20 'call' 'call_ln99' <Predicate = true> <Delay = 1.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 21 [2/2] (0.00ns)   --->   "%call_ret = call i48 @ini_trans, i32 %inStream_x, i32 %inStream_y, i16 %ini_phase_V" [cordiccart2pol.cpp:128]   --->   Operation 21 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 3.12>
+ST_3 : Operation 22 [1/2] (3.12ns)   --->   "%call_ret = call i48 @ini_trans, i32 %inStream_x, i32 %inStream_y, i16 %ini_phase_V" [cordiccart2pol.cpp:128]   --->   Operation 22 'call' 'call_ret' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%x_pip_V_0_c_channel = extractvalue i48 %call_ret" [cordiccart2pol.cpp:128]   --->   Operation 23 'extractvalue' 'x_pip_V_0_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%y_pip_V_0_c_channel = extractvalue i48 %call_ret" [cordiccart2pol.cpp:128]   --->   Operation 24 'extractvalue' 'y_pip_V_0_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%theta_pip_V_0_c_channel = extractvalue i48 %call_ret" [cordiccart2pol.cpp:128]   --->   Operation 25 'extractvalue' 'theta_pip_V_0_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 4 <SV = 3> <Delay = 1.95>
+ST_4 : Operation 26 [2/2] (1.95ns)   --->   "%call_ret1 = call i48 @cordic_cr<(unsigned short)1>, i16 %x_pip_V_0_c_channel, i16 %y_pip_V_0_c_channel, i16 %theta_pip_V_0_c_channel" [cordiccart2pol.cpp:145]   --->   Operation 26 'call' 'call_ret1' <Predicate = true> <Delay = 1.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 2.88>
+ST_5 : Operation 27 [1/2] (2.88ns)   --->   "%call_ret1 = call i48 @cordic_cr<(unsigned short)1>, i16 %x_pip_V_0_c_channel, i16 %y_pip_V_0_c_channel, i16 %theta_pip_V_0_c_channel" [cordiccart2pol.cpp:145]   --->   Operation 27 'call' 'call_ret1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%x_pip_V_1_c_channel = extractvalue i48 %call_ret1" [cordiccart2pol.cpp:145]   --->   Operation 28 'extractvalue' 'x_pip_V_1_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%y_pip_V_1_c_channel = extractvalue i48 %call_ret1" [cordiccart2pol.cpp:145]   --->   Operation 29 'extractvalue' 'y_pip_V_1_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%theta_pip_V_1_c_channel = extractvalue i48 %call_ret1" [cordiccart2pol.cpp:145]   --->   Operation 30 'extractvalue' 'theta_pip_V_1_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 6 <SV = 5> <Delay = 1.95>
+ST_6 : Operation 31 [2/2] (1.95ns)   --->   "%call_ret2 = call i48 @cordic_cr<(unsigned short)2>, i16 %x_pip_V_1_c_channel, i16 %y_pip_V_1_c_channel, i16 %theta_pip_V_1_c_channel" [cordiccart2pol.cpp:146]   --->   Operation 31 'call' 'call_ret2' <Predicate = true> <Delay = 1.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 2.88>
+ST_7 : Operation 32 [1/2] (2.88ns)   --->   "%call_ret2 = call i48 @cordic_cr<(unsigned short)2>, i16 %x_pip_V_1_c_channel, i16 %y_pip_V_1_c_channel, i16 %theta_pip_V_1_c_channel" [cordiccart2pol.cpp:146]   --->   Operation 32 'call' 'call_ret2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 33 [1/1] (0.00ns)   --->   "%x_pip_V_2_c_channel = extractvalue i48 %call_ret2" [cordiccart2pol.cpp:146]   --->   Operation 33 'extractvalue' 'x_pip_V_2_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_7 : Operation 34 [1/1] (0.00ns)   --->   "%y_pip_V_2_c_channel = extractvalue i48 %call_ret2" [cordiccart2pol.cpp:146]   --->   Operation 34 'extractvalue' 'y_pip_V_2_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "%theta_pip_V_2_c_channel = extractvalue i48 %call_ret2" [cordiccart2pol.cpp:146]   --->   Operation 35 'extractvalue' 'theta_pip_V_2_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 8 <SV = 7> <Delay = 1.95>
+ST_8 : Operation 36 [2/2] (1.95ns)   --->   "%call_ret3 = call i48 @cordic_cr<(unsigned short)3>, i16 %x_pip_V_2_c_channel, i16 %y_pip_V_2_c_channel, i16 %theta_pip_V_2_c_channel" [cordiccart2pol.cpp:147]   --->   Operation 36 'call' 'call_ret3' <Predicate = true> <Delay = 1.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 2.88>
+ST_9 : Operation 37 [1/2] (2.88ns)   --->   "%call_ret3 = call i48 @cordic_cr<(unsigned short)3>, i16 %x_pip_V_2_c_channel, i16 %y_pip_V_2_c_channel, i16 %theta_pip_V_2_c_channel" [cordiccart2pol.cpp:147]   --->   Operation 37 'call' 'call_ret3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 38 [1/1] (0.00ns)   --->   "%x_pip_V_3_c_channel = extractvalue i48 %call_ret3" [cordiccart2pol.cpp:147]   --->   Operation 38 'extractvalue' 'x_pip_V_3_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_9 : Operation 39 [1/1] (0.00ns)   --->   "%y_pip_V_3_c_channel = extractvalue i48 %call_ret3" [cordiccart2pol.cpp:147]   --->   Operation 39 'extractvalue' 'y_pip_V_3_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_9 : Operation 40 [1/1] (0.00ns)   --->   "%theta_pip_V_3_c_channel = extractvalue i48 %call_ret3" [cordiccart2pol.cpp:147]   --->   Operation 40 'extractvalue' 'theta_pip_V_3_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 10 <SV = 9> <Delay = 1.95>
+ST_10 : Operation 41 [2/2] (1.95ns)   --->   "%call_ret4 = call i48 @cordic_cr<(unsigned short)4>, i16 %x_pip_V_3_c_channel, i16 %y_pip_V_3_c_channel, i16 %theta_pip_V_3_c_channel" [cordiccart2pol.cpp:148]   --->   Operation 41 'call' 'call_ret4' <Predicate = true> <Delay = 1.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 2.88>
+ST_11 : Operation 42 [1/2] (2.88ns)   --->   "%call_ret4 = call i48 @cordic_cr<(unsigned short)4>, i16 %x_pip_V_3_c_channel, i16 %y_pip_V_3_c_channel, i16 %theta_pip_V_3_c_channel" [cordiccart2pol.cpp:148]   --->   Operation 42 'call' 'call_ret4' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 43 [1/1] (0.00ns)   --->   "%x_pip_V_4_c_channel = extractvalue i48 %call_ret4" [cordiccart2pol.cpp:148]   --->   Operation 43 'extractvalue' 'x_pip_V_4_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_11 : Operation 44 [1/1] (0.00ns)   --->   "%y_pip_V_4_c_channel = extractvalue i48 %call_ret4" [cordiccart2pol.cpp:148]   --->   Operation 44 'extractvalue' 'y_pip_V_4_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_11 : Operation 45 [1/1] (0.00ns)   --->   "%theta_pip_V_4_c_channel = extractvalue i48 %call_ret4" [cordiccart2pol.cpp:148]   --->   Operation 45 'extractvalue' 'theta_pip_V_4_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 12 <SV = 11> <Delay = 1.95>
+ST_12 : Operation 46 [2/2] (1.95ns)   --->   "%call_ret5 = call i48 @cordic_cr<(unsigned short)5>, i16 %x_pip_V_4_c_channel, i16 %y_pip_V_4_c_channel, i16 %theta_pip_V_4_c_channel" [cordiccart2pol.cpp:149]   --->   Operation 46 'call' 'call_ret5' <Predicate = true> <Delay = 1.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 2.88>
+ST_13 : Operation 47 [1/2] (2.88ns)   --->   "%call_ret5 = call i48 @cordic_cr<(unsigned short)5>, i16 %x_pip_V_4_c_channel, i16 %y_pip_V_4_c_channel, i16 %theta_pip_V_4_c_channel" [cordiccart2pol.cpp:149]   --->   Operation 47 'call' 'call_ret5' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 48 [1/1] (0.00ns)   --->   "%x_pip_V_5_c_channel = extractvalue i48 %call_ret5" [cordiccart2pol.cpp:149]   --->   Operation 48 'extractvalue' 'x_pip_V_5_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_13 : Operation 49 [1/1] (0.00ns)   --->   "%y_pip_V_5_c_channel = extractvalue i48 %call_ret5" [cordiccart2pol.cpp:149]   --->   Operation 49 'extractvalue' 'y_pip_V_5_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_13 : Operation 50 [1/1] (0.00ns)   --->   "%theta_pip_V_5_c_channel = extractvalue i48 %call_ret5" [cordiccart2pol.cpp:149]   --->   Operation 50 'extractvalue' 'theta_pip_V_5_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 14 <SV = 13> <Delay = 1.95>
+ST_14 : Operation 51 [2/2] (1.95ns)   --->   "%call_ret6 = call i48 @cordic_cr<(unsigned short)6>, i16 %x_pip_V_5_c_channel, i16 %y_pip_V_5_c_channel, i16 %theta_pip_V_5_c_channel" [cordiccart2pol.cpp:150]   --->   Operation 51 'call' 'call_ret6' <Predicate = true> <Delay = 1.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 2.88>
+ST_15 : Operation 52 [1/2] (2.88ns)   --->   "%call_ret6 = call i48 @cordic_cr<(unsigned short)6>, i16 %x_pip_V_5_c_channel, i16 %y_pip_V_5_c_channel, i16 %theta_pip_V_5_c_channel" [cordiccart2pol.cpp:150]   --->   Operation 52 'call' 'call_ret6' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 53 [1/1] (0.00ns)   --->   "%x_pip_V_6_c_channel = extractvalue i48 %call_ret6" [cordiccart2pol.cpp:150]   --->   Operation 53 'extractvalue' 'x_pip_V_6_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_15 : Operation 54 [1/1] (0.00ns)   --->   "%y_pip_V_6_c_channel = extractvalue i48 %call_ret6" [cordiccart2pol.cpp:150]   --->   Operation 54 'extractvalue' 'y_pip_V_6_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_15 : Operation 55 [1/1] (0.00ns)   --->   "%theta_pip_V_6_c_channel = extractvalue i48 %call_ret6" [cordiccart2pol.cpp:150]   --->   Operation 55 'extractvalue' 'theta_pip_V_6_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+
+State 16 <SV = 15> <Delay = 1.95>
+ST_16 : Operation 56 [2/2] (1.95ns)   --->   "%call_ln150 = call void @Block_entry3947_proc, i16 %x_pip_V_6_c_channel, i16 %y_pip_V_6_c_channel, i16 %theta_pip_V_6_c_channel, i32 %r, i32 %theta, i16 %outStream_theta, i16 %outStream_r" [cordiccart2pol.cpp:150]   --->   Operation 56 'call' 'call_ln150' <Predicate = true> <Delay = 1.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 0.69>
+ST_17 : Operation 57 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln118 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0" [cordiccart2pol.cpp:118]   --->   Operation 57 'specdataflowpipeline' 'specdataflowpipeline_ln118' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 58 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @inStream_x_str, i32 1, void @p_str, void @p_str, i32 1, i32 1, i32 %inStream_x, i32 %inStream_x"   --->   Operation 58 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 59 [1/1] (0.00ns)   --->   "%empty_22 = specchannel i32 @_ssdm_op_SpecChannel, void @inStream_y_str, i32 1, void @p_str, void @p_str, i32 1, i32 1, i32 %inStream_y, i32 %inStream_y"   --->   Operation 59 'specchannel' 'empty_22' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 60 [1/1] (0.00ns)   --->   "%spectopmodule_ln99 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [cordiccart2pol.cpp:99]   --->   Operation 60 'spectopmodule' 'spectopmodule_ln99' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln99 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0" [cordiccart2pol.cpp:99]   --->   Operation 61 'specinterface' 'specinterface_ln99' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 62 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %x"   --->   Operation 62 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %x, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 64 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %y"   --->   Operation 64 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %y, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 66 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %r"   --->   Operation 66 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 68 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %theta"   --->   Operation 68 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %theta, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inStream_x, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inStream_y, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %outStream_theta, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 73 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %outStream_r, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 73 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 74 [1/2] (0.69ns)   --->   "%call_ln150 = call void @Block_entry3947_proc, i16 %x_pip_V_6_c_channel, i16 %y_pip_V_6_c_channel, i16 %theta_pip_V_6_c_channel, i32 %r, i32 %theta, i16 %outStream_theta, i16 %outStream_r" [cordiccart2pol.cpp:150]   --->   Operation 74 'call' 'call_ln150' <Predicate = true> <Delay = 0.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 75 [1/1] (0.00ns)   --->   "%ret_ln163 = ret" [cordiccart2pol.cpp:163]   --->   Operation 75 'ret' 'ret_ln163' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_chain:ce=0
+Port [ x]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ y]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ r]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ theta]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ inStream_x]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=3; pingpong=0; private_global=1; IO mode=ap_fifo:ce=0
+Port [ inStream_y]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=3; pingpong=0; private_global=1; IO mode=ap_fifo:ce=0
+Port [ ini_phase_V]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ outStream_theta]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=3; pingpong=0; private_global=1; IO mode=ap_fifo:ce=0
+Port [ outStream_r]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=3; pingpong=0; private_global=1; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+y_read                     (read                ) [ 000000000000000000]
+x_read                     (read                ) [ 000000000000000000]
+call_ln99                  (call                ) [ 000000000000000000]
+call_ret                   (call                ) [ 000000000000000000]
+x_pip_V_0_c_channel        (extractvalue        ) [ 000011000000000000]
+y_pip_V_0_c_channel        (extractvalue        ) [ 000011000000000000]
+theta_pip_V_0_c_channel    (extractvalue        ) [ 000011000000000000]
+call_ret1                  (call                ) [ 000000000000000000]
+x_pip_V_1_c_channel        (extractvalue        ) [ 000000110000000000]
+y_pip_V_1_c_channel        (extractvalue        ) [ 000000110000000000]
+theta_pip_V_1_c_channel    (extractvalue        ) [ 000000110000000000]
+call_ret2                  (call                ) [ 000000000000000000]
+x_pip_V_2_c_channel        (extractvalue        ) [ 000000001100000000]
+y_pip_V_2_c_channel        (extractvalue        ) [ 000000001100000000]
+theta_pip_V_2_c_channel    (extractvalue        ) [ 000000001100000000]
+call_ret3                  (call                ) [ 000000000000000000]
+x_pip_V_3_c_channel        (extractvalue        ) [ 000000000011000000]
+y_pip_V_3_c_channel        (extractvalue        ) [ 000000000011000000]
+theta_pip_V_3_c_channel    (extractvalue        ) [ 000000000011000000]
+call_ret4                  (call                ) [ 000000000000000000]
+x_pip_V_4_c_channel        (extractvalue        ) [ 000000000000110000]
+y_pip_V_4_c_channel        (extractvalue        ) [ 000000000000110000]
+theta_pip_V_4_c_channel    (extractvalue        ) [ 000000000000110000]
+call_ret5                  (call                ) [ 000000000000000000]
+x_pip_V_5_c_channel        (extractvalue        ) [ 000000000000001100]
+y_pip_V_5_c_channel        (extractvalue        ) [ 000000000000001100]
+theta_pip_V_5_c_channel    (extractvalue        ) [ 000000000000001100]
+call_ret6                  (call                ) [ 000000000000000000]
+x_pip_V_6_c_channel        (extractvalue        ) [ 000000000000000011]
+y_pip_V_6_c_channel        (extractvalue        ) [ 000000000000000011]
+theta_pip_V_6_c_channel    (extractvalue        ) [ 000000000000000011]
+specdataflowpipeline_ln118 (specdataflowpipeline) [ 000000000000000000]
+empty                      (specchannel         ) [ 000000000000000000]
+empty_22                   (specchannel         ) [ 000000000000000000]
+spectopmodule_ln99         (spectopmodule       ) [ 000000000000000000]
+specinterface_ln99         (specinterface       ) [ 000000000000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 000000000000000000]
+specinterface_ln0          (specinterface       ) [ 000000000000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 000000000000000000]
+specinterface_ln0          (specinterface       ) [ 000000000000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 000000000000000000]
+specinterface_ln0          (specinterface       ) [ 000000000000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 000000000000000000]
+specinterface_ln0          (specinterface       ) [ 000000000000000000]
+specinterface_ln0          (specinterface       ) [ 000000000000000000]
+specinterface_ln0          (specinterface       ) [ 000000000000000000]
+specinterface_ln0          (specinterface       ) [ 000000000000000000]
+specinterface_ln0          (specinterface       ) [ 000000000000000000]
+call_ln150                 (call                ) [ 000000000000000000]
+ret_ln163                  (ret                 ) [ 000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="x">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="x"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="y">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="y"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="r">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="r"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="theta">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="theta"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="inStream_x">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inStream_x"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="inStream_y">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inStream_y"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="ini_phase_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ini_phase_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="outStream_theta">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="outStream_theta"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="outStream_r">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="outStream_r"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.float"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Block_entry39_proc9"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ini_trans"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cordic_cr<(unsigned short)1>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cordic_cr<(unsigned short)2>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cordic_cr<(unsigned short)3>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cordic_cr<(unsigned short)4>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cordic_cr<(unsigned short)5>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cordic_cr<(unsigned short)6>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Block_entry3947_proc"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inStream_x_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="inStream_y_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="y_read_read_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="32" slack="0"/>
+<pin id="72" dir="0" index="1" bw="32" slack="0"/>
+<pin id="73" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="y_read/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="x_read_read_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="32" slack="0"/>
+<pin id="78" dir="0" index="1" bw="32" slack="0"/>
+<pin id="79" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="x_read/1 "/>
+</bind>
+</comp>
+
+<comp id="82" class="1004" name="call_ln99_Block_entry39_proc9_fu_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="0" slack="0"/>
+<pin id="84" dir="0" index="1" bw="32" slack="0"/>
+<pin id="85" dir="0" index="2" bw="32" slack="0"/>
+<pin id="86" dir="0" index="3" bw="32" slack="0"/>
+<pin id="87" dir="0" index="4" bw="32" slack="0"/>
+<pin id="88" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln99/1 "/>
+</bind>
+</comp>
+
+<comp id="94" class="1004" name="grp_ini_trans_fu_94">
+<pin_list>
+<pin id="95" dir="0" index="0" bw="48" slack="0"/>
+<pin id="96" dir="0" index="1" bw="32" slack="0"/>
+<pin id="97" dir="0" index="2" bw="32" slack="0"/>
+<pin id="98" dir="0" index="3" bw="16" slack="0"/>
+<pin id="99" dir="1" index="4" bw="48" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret/2 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="grp_cordic_cr_unsigned_short_1_s_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="48" slack="0"/>
+<pin id="106" dir="0" index="1" bw="16" slack="1"/>
+<pin id="107" dir="0" index="2" bw="16" slack="1"/>
+<pin id="108" dir="0" index="3" bw="16" slack="1"/>
+<pin id="109" dir="1" index="4" bw="48" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret1/4 "/>
+</bind>
+</comp>
+
+<comp id="111" class="1004" name="grp_cordic_cr_unsigned_short_2_s_fu_111">
+<pin_list>
+<pin id="112" dir="0" index="0" bw="48" slack="0"/>
+<pin id="113" dir="0" index="1" bw="16" slack="1"/>
+<pin id="114" dir="0" index="2" bw="16" slack="1"/>
+<pin id="115" dir="0" index="3" bw="16" slack="1"/>
+<pin id="116" dir="1" index="4" bw="48" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret2/6 "/>
+</bind>
+</comp>
+
+<comp id="118" class="1004" name="grp_cordic_cr_unsigned_short_3_s_fu_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="48" slack="0"/>
+<pin id="120" dir="0" index="1" bw="16" slack="1"/>
+<pin id="121" dir="0" index="2" bw="16" slack="1"/>
+<pin id="122" dir="0" index="3" bw="16" slack="1"/>
+<pin id="123" dir="1" index="4" bw="48" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret3/8 "/>
+</bind>
+</comp>
+
+<comp id="125" class="1004" name="grp_cordic_cr_unsigned_short_4_s_fu_125">
+<pin_list>
+<pin id="126" dir="0" index="0" bw="48" slack="0"/>
+<pin id="127" dir="0" index="1" bw="16" slack="1"/>
+<pin id="128" dir="0" index="2" bw="16" slack="1"/>
+<pin id="129" dir="0" index="3" bw="16" slack="1"/>
+<pin id="130" dir="1" index="4" bw="48" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret4/10 "/>
+</bind>
+</comp>
+
+<comp id="132" class="1004" name="grp_cordic_cr_unsigned_short_5_s_fu_132">
+<pin_list>
+<pin id="133" dir="0" index="0" bw="48" slack="0"/>
+<pin id="134" dir="0" index="1" bw="16" slack="1"/>
+<pin id="135" dir="0" index="2" bw="16" slack="1"/>
+<pin id="136" dir="0" index="3" bw="16" slack="1"/>
+<pin id="137" dir="1" index="4" bw="48" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret5/12 "/>
+</bind>
+</comp>
+
+<comp id="139" class="1004" name="grp_cordic_cr_unsigned_short_6_s_fu_139">
+<pin_list>
+<pin id="140" dir="0" index="0" bw="48" slack="0"/>
+<pin id="141" dir="0" index="1" bw="16" slack="1"/>
+<pin id="142" dir="0" index="2" bw="16" slack="1"/>
+<pin id="143" dir="0" index="3" bw="16" slack="1"/>
+<pin id="144" dir="1" index="4" bw="48" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret6/14 "/>
+</bind>
+</comp>
+
+<comp id="146" class="1004" name="grp_Block_entry3947_proc_fu_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="0" slack="0"/>
+<pin id="148" dir="0" index="1" bw="16" slack="1"/>
+<pin id="149" dir="0" index="2" bw="16" slack="1"/>
+<pin id="150" dir="0" index="3" bw="16" slack="1"/>
+<pin id="151" dir="0" index="4" bw="32" slack="0"/>
+<pin id="152" dir="0" index="5" bw="32" slack="0"/>
+<pin id="153" dir="0" index="6" bw="16" slack="0"/>
+<pin id="154" dir="0" index="7" bw="16" slack="0"/>
+<pin id="155" dir="1" index="8" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln150/16 "/>
+</bind>
+</comp>
+
+<comp id="161" class="1004" name="x_pip_V_0_c_channel_fu_161">
+<pin_list>
+<pin id="162" dir="0" index="0" bw="48" slack="0"/>
+<pin id="163" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="x_pip_V_0_c_channel/3 "/>
+</bind>
+</comp>
+
+<comp id="165" class="1004" name="y_pip_V_0_c_channel_fu_165">
+<pin_list>
+<pin id="166" dir="0" index="0" bw="48" slack="0"/>
+<pin id="167" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="y_pip_V_0_c_channel/3 "/>
+</bind>
+</comp>
+
+<comp id="169" class="1004" name="theta_pip_V_0_c_channel_fu_169">
+<pin_list>
+<pin id="170" dir="0" index="0" bw="48" slack="0"/>
+<pin id="171" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="theta_pip_V_0_c_channel/3 "/>
+</bind>
+</comp>
+
+<comp id="173" class="1004" name="x_pip_V_1_c_channel_fu_173">
+<pin_list>
+<pin id="174" dir="0" index="0" bw="48" slack="0"/>
+<pin id="175" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="x_pip_V_1_c_channel/5 "/>
+</bind>
+</comp>
+
+<comp id="177" class="1004" name="y_pip_V_1_c_channel_fu_177">
+<pin_list>
+<pin id="178" dir="0" index="0" bw="48" slack="0"/>
+<pin id="179" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="y_pip_V_1_c_channel/5 "/>
+</bind>
+</comp>
+
+<comp id="181" class="1004" name="theta_pip_V_1_c_channel_fu_181">
+<pin_list>
+<pin id="182" dir="0" index="0" bw="48" slack="0"/>
+<pin id="183" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="theta_pip_V_1_c_channel/5 "/>
+</bind>
+</comp>
+
+<comp id="185" class="1004" name="x_pip_V_2_c_channel_fu_185">
+<pin_list>
+<pin id="186" dir="0" index="0" bw="48" slack="0"/>
+<pin id="187" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="x_pip_V_2_c_channel/7 "/>
+</bind>
+</comp>
+
+<comp id="189" class="1004" name="y_pip_V_2_c_channel_fu_189">
+<pin_list>
+<pin id="190" dir="0" index="0" bw="48" slack="0"/>
+<pin id="191" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="y_pip_V_2_c_channel/7 "/>
+</bind>
+</comp>
+
+<comp id="193" class="1004" name="theta_pip_V_2_c_channel_fu_193">
+<pin_list>
+<pin id="194" dir="0" index="0" bw="48" slack="0"/>
+<pin id="195" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="theta_pip_V_2_c_channel/7 "/>
+</bind>
+</comp>
+
+<comp id="197" class="1004" name="x_pip_V_3_c_channel_fu_197">
+<pin_list>
+<pin id="198" dir="0" index="0" bw="48" slack="0"/>
+<pin id="199" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="x_pip_V_3_c_channel/9 "/>
+</bind>
+</comp>
+
+<comp id="201" class="1004" name="y_pip_V_3_c_channel_fu_201">
+<pin_list>
+<pin id="202" dir="0" index="0" bw="48" slack="0"/>
+<pin id="203" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="y_pip_V_3_c_channel/9 "/>
+</bind>
+</comp>
+
+<comp id="205" class="1004" name="theta_pip_V_3_c_channel_fu_205">
+<pin_list>
+<pin id="206" dir="0" index="0" bw="48" slack="0"/>
+<pin id="207" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="theta_pip_V_3_c_channel/9 "/>
+</bind>
+</comp>
+
+<comp id="209" class="1004" name="x_pip_V_4_c_channel_fu_209">
+<pin_list>
+<pin id="210" dir="0" index="0" bw="48" slack="0"/>
+<pin id="211" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="x_pip_V_4_c_channel/11 "/>
+</bind>
+</comp>
+
+<comp id="213" class="1004" name="y_pip_V_4_c_channel_fu_213">
+<pin_list>
+<pin id="214" dir="0" index="0" bw="48" slack="0"/>
+<pin id="215" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="y_pip_V_4_c_channel/11 "/>
+</bind>
+</comp>
+
+<comp id="217" class="1004" name="theta_pip_V_4_c_channel_fu_217">
+<pin_list>
+<pin id="218" dir="0" index="0" bw="48" slack="0"/>
+<pin id="219" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="theta_pip_V_4_c_channel/11 "/>
+</bind>
+</comp>
+
+<comp id="221" class="1004" name="x_pip_V_5_c_channel_fu_221">
+<pin_list>
+<pin id="222" dir="0" index="0" bw="48" slack="0"/>
+<pin id="223" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="x_pip_V_5_c_channel/13 "/>
+</bind>
+</comp>
+
+<comp id="225" class="1004" name="y_pip_V_5_c_channel_fu_225">
+<pin_list>
+<pin id="226" dir="0" index="0" bw="48" slack="0"/>
+<pin id="227" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="y_pip_V_5_c_channel/13 "/>
+</bind>
+</comp>
+
+<comp id="229" class="1004" name="theta_pip_V_5_c_channel_fu_229">
+<pin_list>
+<pin id="230" dir="0" index="0" bw="48" slack="0"/>
+<pin id="231" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="theta_pip_V_5_c_channel/13 "/>
+</bind>
+</comp>
+
+<comp id="233" class="1004" name="x_pip_V_6_c_channel_fu_233">
+<pin_list>
+<pin id="234" dir="0" index="0" bw="48" slack="0"/>
+<pin id="235" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="x_pip_V_6_c_channel/15 "/>
+</bind>
+</comp>
+
+<comp id="237" class="1004" name="y_pip_V_6_c_channel_fu_237">
+<pin_list>
+<pin id="238" dir="0" index="0" bw="48" slack="0"/>
+<pin id="239" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="y_pip_V_6_c_channel/15 "/>
+</bind>
+</comp>
+
+<comp id="241" class="1004" name="theta_pip_V_6_c_channel_fu_241">
+<pin_list>
+<pin id="242" dir="0" index="0" bw="48" slack="0"/>
+<pin id="243" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="theta_pip_V_6_c_channel/15 "/>
+</bind>
+</comp>
+
+<comp id="245" class="1005" name="x_pip_V_0_c_channel_reg_245">
+<pin_list>
+<pin id="246" dir="0" index="0" bw="16" slack="1"/>
+<pin id="247" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_pip_V_0_c_channel "/>
+</bind>
+</comp>
+
+<comp id="250" class="1005" name="y_pip_V_0_c_channel_reg_250">
+<pin_list>
+<pin id="251" dir="0" index="0" bw="16" slack="1"/>
+<pin id="252" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="y_pip_V_0_c_channel "/>
+</bind>
+</comp>
+
+<comp id="255" class="1005" name="theta_pip_V_0_c_channel_reg_255">
+<pin_list>
+<pin id="256" dir="0" index="0" bw="16" slack="1"/>
+<pin id="257" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="theta_pip_V_0_c_channel "/>
+</bind>
+</comp>
+
+<comp id="260" class="1005" name="x_pip_V_1_c_channel_reg_260">
+<pin_list>
+<pin id="261" dir="0" index="0" bw="16" slack="1"/>
+<pin id="262" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_pip_V_1_c_channel "/>
+</bind>
+</comp>
+
+<comp id="265" class="1005" name="y_pip_V_1_c_channel_reg_265">
+<pin_list>
+<pin id="266" dir="0" index="0" bw="16" slack="1"/>
+<pin id="267" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="y_pip_V_1_c_channel "/>
+</bind>
+</comp>
+
+<comp id="270" class="1005" name="theta_pip_V_1_c_channel_reg_270">
+<pin_list>
+<pin id="271" dir="0" index="0" bw="16" slack="1"/>
+<pin id="272" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="theta_pip_V_1_c_channel "/>
+</bind>
+</comp>
+
+<comp id="275" class="1005" name="x_pip_V_2_c_channel_reg_275">
+<pin_list>
+<pin id="276" dir="0" index="0" bw="16" slack="1"/>
+<pin id="277" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_pip_V_2_c_channel "/>
+</bind>
+</comp>
+
+<comp id="280" class="1005" name="y_pip_V_2_c_channel_reg_280">
+<pin_list>
+<pin id="281" dir="0" index="0" bw="16" slack="1"/>
+<pin id="282" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="y_pip_V_2_c_channel "/>
+</bind>
+</comp>
+
+<comp id="285" class="1005" name="theta_pip_V_2_c_channel_reg_285">
+<pin_list>
+<pin id="286" dir="0" index="0" bw="16" slack="1"/>
+<pin id="287" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="theta_pip_V_2_c_channel "/>
+</bind>
+</comp>
+
+<comp id="290" class="1005" name="x_pip_V_3_c_channel_reg_290">
+<pin_list>
+<pin id="291" dir="0" index="0" bw="16" slack="1"/>
+<pin id="292" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_pip_V_3_c_channel "/>
+</bind>
+</comp>
+
+<comp id="295" class="1005" name="y_pip_V_3_c_channel_reg_295">
+<pin_list>
+<pin id="296" dir="0" index="0" bw="16" slack="1"/>
+<pin id="297" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="y_pip_V_3_c_channel "/>
+</bind>
+</comp>
+
+<comp id="300" class="1005" name="theta_pip_V_3_c_channel_reg_300">
+<pin_list>
+<pin id="301" dir="0" index="0" bw="16" slack="1"/>
+<pin id="302" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="theta_pip_V_3_c_channel "/>
+</bind>
+</comp>
+
+<comp id="305" class="1005" name="x_pip_V_4_c_channel_reg_305">
+<pin_list>
+<pin id="306" dir="0" index="0" bw="16" slack="1"/>
+<pin id="307" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_pip_V_4_c_channel "/>
+</bind>
+</comp>
+
+<comp id="310" class="1005" name="y_pip_V_4_c_channel_reg_310">
+<pin_list>
+<pin id="311" dir="0" index="0" bw="16" slack="1"/>
+<pin id="312" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="y_pip_V_4_c_channel "/>
+</bind>
+</comp>
+
+<comp id="315" class="1005" name="theta_pip_V_4_c_channel_reg_315">
+<pin_list>
+<pin id="316" dir="0" index="0" bw="16" slack="1"/>
+<pin id="317" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="theta_pip_V_4_c_channel "/>
+</bind>
+</comp>
+
+<comp id="320" class="1005" name="x_pip_V_5_c_channel_reg_320">
+<pin_list>
+<pin id="321" dir="0" index="0" bw="16" slack="1"/>
+<pin id="322" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_pip_V_5_c_channel "/>
+</bind>
+</comp>
+
+<comp id="325" class="1005" name="y_pip_V_5_c_channel_reg_325">
+<pin_list>
+<pin id="326" dir="0" index="0" bw="16" slack="1"/>
+<pin id="327" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="y_pip_V_5_c_channel "/>
+</bind>
+</comp>
+
+<comp id="330" class="1005" name="theta_pip_V_5_c_channel_reg_330">
+<pin_list>
+<pin id="331" dir="0" index="0" bw="16" slack="1"/>
+<pin id="332" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="theta_pip_V_5_c_channel "/>
+</bind>
+</comp>
+
+<comp id="335" class="1005" name="x_pip_V_6_c_channel_reg_335">
+<pin_list>
+<pin id="336" dir="0" index="0" bw="16" slack="1"/>
+<pin id="337" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="x_pip_V_6_c_channel "/>
+</bind>
+</comp>
+
+<comp id="340" class="1005" name="y_pip_V_6_c_channel_reg_340">
+<pin_list>
+<pin id="341" dir="0" index="0" bw="16" slack="1"/>
+<pin id="342" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="y_pip_V_6_c_channel "/>
+</bind>
+</comp>
+
+<comp id="345" class="1005" name="theta_pip_V_6_c_channel_reg_345">
+<pin_list>
+<pin id="346" dir="0" index="0" bw="16" slack="1"/>
+<pin id="347" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="theta_pip_V_6_c_channel "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="74"><net_src comp="18" pin="0"/><net_sink comp="70" pin=0"/></net>
+
+<net id="75"><net_src comp="2" pin="0"/><net_sink comp="70" pin=1"/></net>
+
+<net id="80"><net_src comp="18" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="81"><net_src comp="0" pin="0"/><net_sink comp="76" pin=1"/></net>
+
+<net id="89"><net_src comp="20" pin="0"/><net_sink comp="82" pin=0"/></net>
+
+<net id="90"><net_src comp="76" pin="2"/><net_sink comp="82" pin=1"/></net>
+
+<net id="91"><net_src comp="70" pin="2"/><net_sink comp="82" pin=2"/></net>
+
+<net id="92"><net_src comp="8" pin="0"/><net_sink comp="82" pin=3"/></net>
+
+<net id="93"><net_src comp="10" pin="0"/><net_sink comp="82" pin=4"/></net>
+
+<net id="100"><net_src comp="22" pin="0"/><net_sink comp="94" pin=0"/></net>
+
+<net id="101"><net_src comp="8" pin="0"/><net_sink comp="94" pin=1"/></net>
+
+<net id="102"><net_src comp="10" pin="0"/><net_sink comp="94" pin=2"/></net>
+
+<net id="103"><net_src comp="12" pin="0"/><net_sink comp="94" pin=3"/></net>
+
+<net id="110"><net_src comp="24" pin="0"/><net_sink comp="104" pin=0"/></net>
+
+<net id="117"><net_src comp="26" pin="0"/><net_sink comp="111" pin=0"/></net>
+
+<net id="124"><net_src comp="28" pin="0"/><net_sink comp="118" pin=0"/></net>
+
+<net id="131"><net_src comp="30" pin="0"/><net_sink comp="125" pin=0"/></net>
+
+<net id="138"><net_src comp="32" pin="0"/><net_sink comp="132" pin=0"/></net>
+
+<net id="145"><net_src comp="34" pin="0"/><net_sink comp="139" pin=0"/></net>
+
+<net id="156"><net_src comp="36" pin="0"/><net_sink comp="146" pin=0"/></net>
+
+<net id="157"><net_src comp="4" pin="0"/><net_sink comp="146" pin=4"/></net>
+
+<net id="158"><net_src comp="6" pin="0"/><net_sink comp="146" pin=5"/></net>
+
+<net id="159"><net_src comp="14" pin="0"/><net_sink comp="146" pin=6"/></net>
+
+<net id="160"><net_src comp="16" pin="0"/><net_sink comp="146" pin=7"/></net>
+
+<net id="164"><net_src comp="94" pin="4"/><net_sink comp="161" pin=0"/></net>
+
+<net id="168"><net_src comp="94" pin="4"/><net_sink comp="165" pin=0"/></net>
+
+<net id="172"><net_src comp="94" pin="4"/><net_sink comp="169" pin=0"/></net>
+
+<net id="176"><net_src comp="104" pin="4"/><net_sink comp="173" pin=0"/></net>
+
+<net id="180"><net_src comp="104" pin="4"/><net_sink comp="177" pin=0"/></net>
+
+<net id="184"><net_src comp="104" pin="4"/><net_sink comp="181" pin=0"/></net>
+
+<net id="188"><net_src comp="111" pin="4"/><net_sink comp="185" pin=0"/></net>
+
+<net id="192"><net_src comp="111" pin="4"/><net_sink comp="189" pin=0"/></net>
+
+<net id="196"><net_src comp="111" pin="4"/><net_sink comp="193" pin=0"/></net>
+
+<net id="200"><net_src comp="118" pin="4"/><net_sink comp="197" pin=0"/></net>
+
+<net id="204"><net_src comp="118" pin="4"/><net_sink comp="201" pin=0"/></net>
+
+<net id="208"><net_src comp="118" pin="4"/><net_sink comp="205" pin=0"/></net>
+
+<net id="212"><net_src comp="125" pin="4"/><net_sink comp="209" pin=0"/></net>
+
+<net id="216"><net_src comp="125" pin="4"/><net_sink comp="213" pin=0"/></net>
+
+<net id="220"><net_src comp="125" pin="4"/><net_sink comp="217" pin=0"/></net>
+
+<net id="224"><net_src comp="132" pin="4"/><net_sink comp="221" pin=0"/></net>
+
+<net id="228"><net_src comp="132" pin="4"/><net_sink comp="225" pin=0"/></net>
+
+<net id="232"><net_src comp="132" pin="4"/><net_sink comp="229" pin=0"/></net>
+
+<net id="236"><net_src comp="139" pin="4"/><net_sink comp="233" pin=0"/></net>
+
+<net id="240"><net_src comp="139" pin="4"/><net_sink comp="237" pin=0"/></net>
+
+<net id="244"><net_src comp="139" pin="4"/><net_sink comp="241" pin=0"/></net>
+
+<net id="248"><net_src comp="161" pin="1"/><net_sink comp="245" pin=0"/></net>
+
+<net id="249"><net_src comp="245" pin="1"/><net_sink comp="104" pin=1"/></net>
+
+<net id="253"><net_src comp="165" pin="1"/><net_sink comp="250" pin=0"/></net>
+
+<net id="254"><net_src comp="250" pin="1"/><net_sink comp="104" pin=2"/></net>
+
+<net id="258"><net_src comp="169" pin="1"/><net_sink comp="255" pin=0"/></net>
+
+<net id="259"><net_src comp="255" pin="1"/><net_sink comp="104" pin=3"/></net>
+
+<net id="263"><net_src comp="173" pin="1"/><net_sink comp="260" pin=0"/></net>
+
+<net id="264"><net_src comp="260" pin="1"/><net_sink comp="111" pin=1"/></net>
+
+<net id="268"><net_src comp="177" pin="1"/><net_sink comp="265" pin=0"/></net>
+
+<net id="269"><net_src comp="265" pin="1"/><net_sink comp="111" pin=2"/></net>
+
+<net id="273"><net_src comp="181" pin="1"/><net_sink comp="270" pin=0"/></net>
+
+<net id="274"><net_src comp="270" pin="1"/><net_sink comp="111" pin=3"/></net>
+
+<net id="278"><net_src comp="185" pin="1"/><net_sink comp="275" pin=0"/></net>
+
+<net id="279"><net_src comp="275" pin="1"/><net_sink comp="118" pin=1"/></net>
+
+<net id="283"><net_src comp="189" pin="1"/><net_sink comp="280" pin=0"/></net>
+
+<net id="284"><net_src comp="280" pin="1"/><net_sink comp="118" pin=2"/></net>
+
+<net id="288"><net_src comp="193" pin="1"/><net_sink comp="285" pin=0"/></net>
+
+<net id="289"><net_src comp="285" pin="1"/><net_sink comp="118" pin=3"/></net>
+
+<net id="293"><net_src comp="197" pin="1"/><net_sink comp="290" pin=0"/></net>
+
+<net id="294"><net_src comp="290" pin="1"/><net_sink comp="125" pin=1"/></net>
+
+<net id="298"><net_src comp="201" pin="1"/><net_sink comp="295" pin=0"/></net>
+
+<net id="299"><net_src comp="295" pin="1"/><net_sink comp="125" pin=2"/></net>
+
+<net id="303"><net_src comp="205" pin="1"/><net_sink comp="300" pin=0"/></net>
+
+<net id="304"><net_src comp="300" pin="1"/><net_sink comp="125" pin=3"/></net>
+
+<net id="308"><net_src comp="209" pin="1"/><net_sink comp="305" pin=0"/></net>
+
+<net id="309"><net_src comp="305" pin="1"/><net_sink comp="132" pin=1"/></net>
+
+<net id="313"><net_src comp="213" pin="1"/><net_sink comp="310" pin=0"/></net>
+
+<net id="314"><net_src comp="310" pin="1"/><net_sink comp="132" pin=2"/></net>
+
+<net id="318"><net_src comp="217" pin="1"/><net_sink comp="315" pin=0"/></net>
+
+<net id="319"><net_src comp="315" pin="1"/><net_sink comp="132" pin=3"/></net>
+
+<net id="323"><net_src comp="221" pin="1"/><net_sink comp="320" pin=0"/></net>
+
+<net id="324"><net_src comp="320" pin="1"/><net_sink comp="139" pin=1"/></net>
+
+<net id="328"><net_src comp="225" pin="1"/><net_sink comp="325" pin=0"/></net>
+
+<net id="329"><net_src comp="325" pin="1"/><net_sink comp="139" pin=2"/></net>
+
+<net id="333"><net_src comp="229" pin="1"/><net_sink comp="330" pin=0"/></net>
+
+<net id="334"><net_src comp="330" pin="1"/><net_sink comp="139" pin=3"/></net>
+
+<net id="338"><net_src comp="233" pin="1"/><net_sink comp="335" pin=0"/></net>
+
+<net id="339"><net_src comp="335" pin="1"/><net_sink comp="146" pin=1"/></net>
+
+<net id="343"><net_src comp="237" pin="1"/><net_sink comp="340" pin=0"/></net>
+
+<net id="344"><net_src comp="340" pin="1"/><net_sink comp="146" pin=2"/></net>
+
+<net id="348"><net_src comp="241" pin="1"/><net_sink comp="345" pin=0"/></net>
+
+<net id="349"><net_src comp="345" pin="1"/><net_sink comp="146" pin=3"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: r | {16 17 }
+	Port: theta | {16 17 }
+	Port: inStream_x | {1 }
+	Port: inStream_y | {1 }
+	Port: outStream_theta | {16 17 }
+	Port: outStream_r | {16 17 }
+ - Input state : 
+	Port: cordiccart2pol : x | {1 }
+	Port: cordiccart2pol : y | {1 }
+	Port: cordiccart2pol : inStream_x | {2 3 }
+	Port: cordiccart2pol : inStream_y | {2 3 }
+	Port: cordiccart2pol : ini_phase_V | {2 3 }
+	Port: cordiccart2pol : outStream_theta | {16 17 }
+	Port: cordiccart2pol : outStream_r | {16 17 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+		x_pip_V_0_c_channel : 1
+		y_pip_V_0_c_channel : 1
+		theta_pip_V_0_c_channel : 1
+	State 4
+	State 5
+		x_pip_V_1_c_channel : 1
+		y_pip_V_1_c_channel : 1
+		theta_pip_V_1_c_channel : 1
+	State 6
+	State 7
+		x_pip_V_2_c_channel : 1
+		y_pip_V_2_c_channel : 1
+		theta_pip_V_2_c_channel : 1
+	State 8
+	State 9
+		x_pip_V_3_c_channel : 1
+		y_pip_V_3_c_channel : 1
+		theta_pip_V_3_c_channel : 1
+	State 10
+	State 11
+		x_pip_V_4_c_channel : 1
+		y_pip_V_4_c_channel : 1
+		theta_pip_V_4_c_channel : 1
+	State 12
+	State 13
+		x_pip_V_5_c_channel : 1
+		y_pip_V_5_c_channel : 1
+		theta_pip_V_5_c_channel : 1
+	State 14
+	State 15
+		x_pip_V_6_c_channel : 1
+		y_pip_V_6_c_channel : 1
+		theta_pip_V_6_c_channel : 1
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------------------------|---------|---------|---------|---------|
+| Operation|             Functional Unit             |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|-----------------------------------------|---------|---------|---------|---------|
+|          |   call_ln99_Block_entry39_proc9_fu_82   |    0    |    0    |    0    |    0    |
+|          |           grp_ini_trans_fu_94           |    0    |  11.116 |   1851  |   1877  |
+|          | grp_cordic_cr_unsigned_short_1_s_fu_104 |    0    |    0    |    79   |   163   |
+|          | grp_cordic_cr_unsigned_short_2_s_fu_111 |    0    |    0    |    77   |   163   |
+|   call   | grp_cordic_cr_unsigned_short_3_s_fu_118 |    0    |    0    |    75   |   163   |
+|          | grp_cordic_cr_unsigned_short_4_s_fu_125 |    0    |    0    |    73   |   163   |
+|          | grp_cordic_cr_unsigned_short_5_s_fu_132 |    0    |    0    |    71   |   163   |
+|          | grp_cordic_cr_unsigned_short_6_s_fu_139 |    0    |    0    |    69   |   163   |
+|          |     grp_Block_entry3947_proc_fu_146     |    1    |  14.292 |   2109  |   1811  |
+|----------|-----------------------------------------|---------|---------|---------|---------|
+|   read   |            y_read_read_fu_70            |    0    |    0    |    0    |    0    |
+|          |            x_read_read_fu_76            |    0    |    0    |    0    |    0    |
+|----------|-----------------------------------------|---------|---------|---------|---------|
+|          |        x_pip_V_0_c_channel_fu_161       |    0    |    0    |    0    |    0    |
+|          |        y_pip_V_0_c_channel_fu_165       |    0    |    0    |    0    |    0    |
+|          |      theta_pip_V_0_c_channel_fu_169     |    0    |    0    |    0    |    0    |
+|          |        x_pip_V_1_c_channel_fu_173       |    0    |    0    |    0    |    0    |
+|          |        y_pip_V_1_c_channel_fu_177       |    0    |    0    |    0    |    0    |
+|          |      theta_pip_V_1_c_channel_fu_181     |    0    |    0    |    0    |    0    |
+|          |        x_pip_V_2_c_channel_fu_185       |    0    |    0    |    0    |    0    |
+|          |        y_pip_V_2_c_channel_fu_189       |    0    |    0    |    0    |    0    |
+|          |      theta_pip_V_2_c_channel_fu_193     |    0    |    0    |    0    |    0    |
+|          |        x_pip_V_3_c_channel_fu_197       |    0    |    0    |    0    |    0    |
+|extractvalue|        y_pip_V_3_c_channel_fu_201       |    0    |    0    |    0    |    0    |
+|          |      theta_pip_V_3_c_channel_fu_205     |    0    |    0    |    0    |    0    |
+|          |        x_pip_V_4_c_channel_fu_209       |    0    |    0    |    0    |    0    |
+|          |        y_pip_V_4_c_channel_fu_213       |    0    |    0    |    0    |    0    |
+|          |      theta_pip_V_4_c_channel_fu_217     |    0    |    0    |    0    |    0    |
+|          |        x_pip_V_5_c_channel_fu_221       |    0    |    0    |    0    |    0    |
+|          |        y_pip_V_5_c_channel_fu_225       |    0    |    0    |    0    |    0    |
+|          |      theta_pip_V_5_c_channel_fu_229     |    0    |    0    |    0    |    0    |
+|          |        x_pip_V_6_c_channel_fu_233       |    0    |    0    |    0    |    0    |
+|          |        y_pip_V_6_c_channel_fu_237       |    0    |    0    |    0    |    0    |
+|          |      theta_pip_V_6_c_channel_fu_241     |    0    |    0    |    0    |    0    |
+|----------|-----------------------------------------|---------|---------|---------|---------|
+|   Total  |                                         |    1    |  25.408 |   4404  |   4666  |
+|----------|-----------------------------------------|---------|---------|---------|---------|
+
+Memories:
++-----------+--------+--------+--------+
+|           |  BRAM  |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|ini_phase_V|    0   |   16   |    1   |
++-----------+--------+--------+--------+
+|   Total   |    0   |   16   |    1   |
++-----------+--------+--------+--------+
+
+* Register list:
++-------------------------------+--------+
+|                               |   FF   |
++-------------------------------+--------+
+|theta_pip_V_0_c_channel_reg_255|   16   |
+|theta_pip_V_1_c_channel_reg_270|   16   |
+|theta_pip_V_2_c_channel_reg_285|   16   |
+|theta_pip_V_3_c_channel_reg_300|   16   |
+|theta_pip_V_4_c_channel_reg_315|   16   |
+|theta_pip_V_5_c_channel_reg_330|   16   |
+|theta_pip_V_6_c_channel_reg_345|   16   |
+|  x_pip_V_0_c_channel_reg_245  |   16   |
+|  x_pip_V_1_c_channel_reg_260  |   16   |
+|  x_pip_V_2_c_channel_reg_275  |   16   |
+|  x_pip_V_3_c_channel_reg_290  |   16   |
+|  x_pip_V_4_c_channel_reg_305  |   16   |
+|  x_pip_V_5_c_channel_reg_320  |   16   |
+|  x_pip_V_6_c_channel_reg_335  |   16   |
+|  y_pip_V_0_c_channel_reg_250  |   16   |
+|  y_pip_V_1_c_channel_reg_265  |   16   |
+|  y_pip_V_2_c_channel_reg_280  |   16   |
+|  y_pip_V_3_c_channel_reg_295  |   16   |
+|  y_pip_V_4_c_channel_reg_310  |   16   |
+|  y_pip_V_5_c_channel_reg_325  |   16   |
+|  y_pip_V_6_c_channel_reg_340  |   16   |
++-------------------------------+--------+
+|             Total             |   336  |
++-------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |    -   |    1   |   25   |  4404  |  4666  |
+|   Memory  |    0   |    -   |    -   |   16   |    1   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |   336  |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |    0   |    1   |   25   |  4756  |  4667  |
++-----------+--------+--------+--------+--------+--------+

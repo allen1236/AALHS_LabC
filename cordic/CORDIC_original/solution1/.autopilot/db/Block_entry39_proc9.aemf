@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1668350437327">
+  <ports id="1" name="x" type="PortType" coreId="1869438833" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="y" type="PortType" coreId="1701080941" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="inStream_x" type="PortType" coreName="FIFO_SRL" coreId="1869438833" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="inStream_y" type="PortType" coreName="FIFO_SRL" coreId="673197107" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="19" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="21" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="22" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="25" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.2"/>
+  <edges id="26" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="27" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="29" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.3"/>
+  <edges id="30" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <blocks id="16" name="Block_entry39_proc9" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="y_read" coreId="842080300" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>y</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="x_read" coreId="842080300" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>x</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="bitcast_ln174" lineNumber="174" fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="inStream_x_din" coreId="842080300" contextFuncName="write" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="write"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="inStream_x_write_ln174" lineNumber="174" fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="write" opcode="write" m_display="0" m_delay="1.95" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="write"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>inStream_x</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="bitcast_ln174_1" lineNumber="174" fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="inStream_y_din" coreId="0" contextFuncName="write" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="write"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="inStream_y_write_ln174" lineNumber="174" fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="write" opcode="write" m_display="0" m_delay="1.95" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="174" fileDirectory="D:\Documents\HLS\LabC\cordic_orig-20221113T132330Z-001\cordic_orig" functionName="write"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>inStream_y</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln0" coreId="842080300" opcode="ret" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1"/>
+    <fileValidLineNumbers fileName="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>174</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="bitcast_ln174_1_fu_53">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln174_fu_48">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="y_read_read_fu_22">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln174_write_fu_41">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="x_read_read_fu_28">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln174_write_fu_34">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioPorts name="inStream_x">
+    <contents name="write">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStream_y">
+    <contents name="write">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="x">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="y">
+    <contents name="read">
+      <nodeIds>5</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Block_entry39_proc9" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

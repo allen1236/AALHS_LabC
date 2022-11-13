@@ -1,0 +1,42 @@
+INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Allen' on host 'laptop-p5g6na7f' (Windows NT_amd64 version 6.2) on Sun Nov 13 22:40:58 +0800 2022
+INFO: [HLS 200-10] In directory 'D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig'
+Sourcing Tcl script 'D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1/cosim.tcl'
+INFO: [HLS 200-1510] Running: source D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1/cosim.tcl
+INFO: [HLS 200-1510] Running: open_project CORDIC_original 
+INFO: [HLS 200-10] Opening project 'D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original'.
+INFO: [HLS 200-1510] Running: set_top cordiccart2pol 
+INFO: [HLS 200-1510] Running: add_files cordiccart2pol.cpp 
+INFO: [HLS 200-10] Adding design file 'cordiccart2pol.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files cordiccart2pol.h 
+INFO: [HLS 200-10] Adding design file 'cordiccart2pol.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb cordiccart2pol_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'cordiccart2pol_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5.35ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 5.35 -name default 
+INFO: [HLS 200-1510] Running: source ./CORDIC_original/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name cordiccart2pol cordiccart2pol 
+INFO: [HLS 200-1510] Running: cosim_design -enable_dataflow_profiling -trace_level all 
+ERROR: [COSIM 212-366] Cannot delete directory  'sim/verilog': it is being used by another program. Please close the program and try again.
+error deleting "sim/verilog": permission denied
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 0.000 MB.
+command 'ap_source' returned error code
+    while executing
+"source D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1/cosim.tcl"
+    invoked from within
+"hls::main D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1/cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 2.81 seconds; peak allocated memory: 1.464 GB.

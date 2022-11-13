@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Nov 13 21:51:40 2022
+# Process ID: 15104
+# Current directory: D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1/sim/verilog/vivado.log
+# Journal file: D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1/sim/verilog\vivado.jou
+# Running On: LAPTOP-P5G6NA7F, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16931 MB
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at E:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at E:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at E:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at E:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at E:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at E:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2022.1/data/ip'.
+current_fileset: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1693.441 ; gain = 0.000
+# open_wave_database cordiccart2pol.wdb
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/AESL_inst_cordiccart2pol_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/Block_entry4452_proc_U0/Block_entry4452_proc_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/Block_entry44_proc9_U0/Block_entry44_proc9_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/cordic_cr_unsigned_short_1_U0/cordic_cr_unsigned_short_1_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/cordic_cr_unsigned_short_2_U0/cordic_cr_unsigned_short_2_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/cordic_cr_unsigned_short_3_U0/cordic_cr_unsigned_short_3_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/cordic_cr_unsigned_short_4_U0/cordic_cr_unsigned_short_4_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/cordic_cr_unsigned_short_5_U0/cordic_cr_unsigned_short_5_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/cordic_cr_unsigned_short_6_U0/cordic_cr_unsigned_short_6_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cordiccart2pol_top/AESL_inst_cordiccart2pol/ini_trans_U0/ini_trans_U0_activity
+open_wave_config D:/Documents/HLS/LabC/cordic_orig-20221113T132330Z-001/cordic_orig/CORDIC_original/solution1/sim/verilog/cordiccart2pol.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 13 22:45:26 2022...

@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Nov 13 21:00:02 2022
+# Process ID: 5832
+# Current directory: D:/Documents/HLS/LabC/Big_Data_Ser/baseline/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: D:/Documents/HLS/LabC/Big_Data_Ser/baseline/sim/verilog/vivado.log
+# Journal file: D:/Documents/HLS/LabC/Big_Data_Ser/baseline/sim/verilog\vivado.jou
+# Running On: LAPTOP-P5G6NA7F, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16931 MB
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config D:/Documents/HLS/LabC/Big_Data_Ser/baseline/sim/verilog/dut.wcfg
+close_sim
